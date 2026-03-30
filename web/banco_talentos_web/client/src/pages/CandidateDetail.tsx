@@ -49,8 +49,8 @@ export default function CandidateDetail() {
           setLocation("/login");
           return;
         }
-
-        const response = await fetch(`http://localhost:5000/api/candidatos/${params?.id}`, {
+        const API_URL = import.meta.env.VITE_API_URL;
+        const response = await fetch(`${API_URL}/api/candidatos/${params?.id}`, {
           headers: {
             "Authorization": `Bearer ${token}`,
             "Content-Type": "application/json"
@@ -99,8 +99,8 @@ export default function CandidateDetail() {
     try {
       setIsSaving(true);
       const token = localStorage.getItem("token");
-
-      const response = await fetch(`http://localhost:5000/api/candidatos/${params?.id}`, {
+      const API_URL = import.meta.env.VITE_API_URL;
+      const response = await fetch(`${API_URL}/api/candidatos/${params?.id}`, {
         method: "PUT",
         headers: {
           "Authorization": `Bearer ${token}`,

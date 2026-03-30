@@ -63,8 +63,8 @@ export default function Home() {
         }
 
         console.log("📡 Buscando candidatos com token...");
-
-        const response = await fetch('http://localhost:5000/api/candidatos', {
+        const API_URL = import.meta.env.VITE_API_URL;
+        const response = await fetch(`${API_URL}/api/candidatos`, {
           method: 'GET',
           headers: {
             "Authorization": `Bearer ${token}`,
