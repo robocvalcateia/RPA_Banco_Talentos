@@ -38,6 +38,8 @@ export default function CandidateDetail() {
   const [error, setError] = useState("");
   const [isEditing, setIsEditing] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
+  const [templates, setTemplates] = useState<any[]>([]);
+  const [generatingDoc, setGeneratingDoc] = useState(false);
   
   const [formData, setFormData] = useState<Candidate | null>(null);
 
@@ -87,6 +89,29 @@ export default function CandidateDetail() {
     }
   }, [params?.id, setLocation]);
 
+// Carregar templates disponíveis
+useEffect(() => {
+  const fetchTemplates = async () => {
+    try {
+      const token = localStorage.getItem("token");
+      const API_URL = import.meta.env.VITE_API_URL;
+      const response = await fetch(`${API_URL}/api/templates`, {
+        headers: {
+          "Authorization": `Bearer ${token}`,
+        }
+      } );
+      const data = await response.json();
+      if (data.success) {
+        setTemplates(data.templates);
+      }
+    } catch (err) {
+      console.error("Erro ao carregar templates:", err);
+    }
+  };
+  
+  fetchTemplates();
+}, []);
+
   const handleInputChange = (field: keyof Candidate, value: string) => {
     if (formData) {
       setFormData({
@@ -97,6 +122,7 @@ export default function CandidateDetail() {
   };
 
   const handleSave = async () => {
+
     if (!formData) return;
 
     try {
@@ -130,6 +156,42 @@ export default function CandidateDetail() {
     }
   };
 
+      // Gerar documento
+      const handleGenerateDocument = async (templateId: string) => {
+        setGeneratingDoc(true);
+        try {
+          const token = localStorage.getItem("token");
+          const API_URL = import.meta.env.VITE_API_URL;
+          const response = await fetch(`${API_URL}/api/candidatos/${params?.id}/gerar-documento`,
+            {
+              method: "POST",
+              headers: {
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ template_id: templateId } )
+            }
+          );
+          
+          if (response.ok) {
+            // Download do arquivo
+            const blob = await response.blob();
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = `${candidate?.nome}_${templateId}.docx`;
+            a.click();
+            window.URL.revokeObjectURL(url);
+          } else {
+            setError("Erro ao gerar documento");
+          }
+        } catch (err) {
+          console.error("Erro ao gerar documento:", err);
+          setError("Erro ao gerar documento");
+        } finally {
+          setGeneratingDoc(false);
+        }
+      };
   const handleCancel = () => {
     setFormData(candidate);
     setIsEditing(false);
@@ -180,7 +242,19 @@ export default function CandidateDetail() {
             <ArrowLeft className="w-4 h-4" />
             Voltar
           </Button>
-          
+          {/* Botão no UI */}
+          <div className="flex gap-2 mt-4">
+            {templates.map((template) => (
+              <Button
+                key={template.id}
+                onClick={() => handleGenerateDocument(template.id)}
+                disabled={generatingDoc}
+                variant="outline"
+              >
+                📄 {template.nome}
+              </Button>
+            ))}
+          </div>
           {!isEditing ? (
             <Button
               onClick={() => setIsEditing(true)}

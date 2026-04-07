@@ -11,6 +11,10 @@ from modules.mongodb_handler import get_mongodb_handler
 from auth_utils import generate_token, verify_token, token_required
 import os
 from dotenv import load_dotenv
+from modules.word_generator import WordGenerator
+from flask import send_file
+
+word_gen = WordGenerator("templates")
 
 load_dotenv()
 
@@ -43,6 +47,89 @@ USERS_DB = {
 # ============================================
 # ENDPOINTS DE AUTENTICAÇÃO
 # ============================================
+
+@app.route('/api/candidatos/<id>/gerar-documento', methods=['POST'])
+@token_required
+def gerar_documento(id):
+    """
+    Gera documento Word com dados do candidato
+    
+    Headers obrigatório:
+    Authorization: Bearer <token_jwt>
+    
+    Esperado:
+    {
+        "template_id": "cv"  // ou "carta", "perfil_linkedin"
+    }
+    
+    Retorna:
+    Arquivo Word para download
+    """
+    try:
+        handler = get_mongodb_handler()
+        candidato = handler.get_candidate_by_id(id)
+        
+        if not candidato:
+            return jsonify({
+                'success': False,
+                'error': 'Candidato não encontrado'
+            }), 404
+        
+        data = request.get_json()
+        template_id = data.get('template_id', 'cv')
+        
+        # Gerar documento
+        output_path, filename = word_gen.generate_document(
+            template_id,
+            serialize_doc(candidato)
+        )
+        
+        # Retornar arquivo
+        return send_file(
+            output_path,
+            as_attachment=True,
+            download_name=filename,
+            mimetype='application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+        )
+    
+    except Exception as e:
+        print(f"❌ Erro ao gerar documento: {str(e)}")
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
+
+@app.route('/api/templates', methods=['GET'])
+@token_required
+def list_templates():
+    """
+    Retorna lista de templates disponíveis
+    
+    Headers obrigatório:
+    Authorization: Bearer <token_jwt>
+    
+    Retorna:
+    {
+        "success": true,
+        "templates": [
+            {"id": "cv", "nome": "Currículo Padrão"},
+            {"id": "carta", "nome": "Carta de Apresentação"}
+        ]
+    }
+    """
+    try:
+        templates = word_gen.list_templates()
+        return jsonify({
+            'success': True,
+            'templates': templates
+        }), 200
+    
+    except Exception as e:
+        print(f"❌ Erro ao listar templates: {str(e)}")
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
 
 def serialize_doc(doc):
     """Serializa documento do MongoDB para JSON"""

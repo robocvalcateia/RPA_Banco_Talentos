@@ -1,0 +1,30 @@
+{
+  "templates": [
+    {
+      "id": "cv",
+      "nome": "Currículo Padrão",
+      "arquivo": "template_1_cv.docx",
+      "placeholders": {
+        "NOME": "nome",
+        "EMAIL": "email",
+        "TELEFONE": "telefone",
+        "ENDERECO": "endereco",
+        "SKILLS": "skills",
+        "FORMACAO": "formacao_academica",
+        "EXPERIENCIA": "experiencia_profissional",
+        "CURSOS": "cursos_certificacoes",
+        "LINKEDIN": "linkedin"
+      }
+    },
+    {
+      "id": "carta",
+      "nome": "Carta de Apresentação",
+      "arquivo": "template_2_carta_apresentacao.docx",
+      "placeholders": {
+        "NOME_CANDIDATO": "nome",
+        "SKILLS_PRINCIPAIS": "skills",
+        "EXPERIENCIA_RESUMIDA": "experiencia_profissional"
+      }
+    }
+  ]
+}
