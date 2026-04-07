@@ -10,9 +10,12 @@ class WordGenerator:
         self.config = self.load_config()
     
     def load_config(self):
-        """Carrega configuração de templates"""
-        config_path = os.path.join(self.templates_dir, "config.json")
-        with open(config_path, 'r', encoding='utf-8') as f:
+        import os
+
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        config_path = os.path.join(base_dir, "..", "templates", "config.json")
+
+        with open(config_path, "r", encoding="utf-8") as f:
             return json.load(f)
     
     def get_template_info(self, template_id):
