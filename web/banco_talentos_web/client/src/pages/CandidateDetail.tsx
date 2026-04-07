@@ -10,16 +10,19 @@ import { useAuth } from "@/contexts/AuthContext";
 interface Candidate {
   _id: string;
   nome: string;
-  email: string;
-  telefone: string;
+  nacionalidade: string;
+  idade: string;
   endereco: string;
+  telefone: string;
+  email: string;
+  linkedin: string;
   skills: string;
   formacao_academica: string;
-  cursos_certificacoes: string;
   nivel_ingles: string;
   nivel_espanhol: string;
+  cursos_certificacoes: string;
+  conhecimento_tecnico: string;
   experiencia_profissional: string;
-  linkedin: string;
   fonte: string;
   data_criacao: string;
   data_atualizacao: string;
@@ -246,6 +249,39 @@ export default function CandidateDetail() {
           </div>
 
           {/* Grid de Campos */}
+          {/* Nacionalidade */}
+          <div>
+            <label className="block text-sm font-medium text-slate-700 mb-2">
+              Nacionalidade
+            </label>
+            {isEditing ? (
+              <Input
+                value={formData?.nacionalidade || ""}
+                onChange={(e) =>
+                  handleInputChange("nacionalidade", e.target.value)
+                }
+              />
+            ) : (
+              <p className="text-slate-600">{candidate.nacionalidade || "-"}</p>
+            )}
+          </div>
+
+          {/* Idade */}
+          <div>
+            <label className="block text-sm font-medium text-slate-700 mb-2">
+              Idade
+            </label>
+            {isEditing ? (
+              <Input
+                value={formData?.idade || ""}
+                onChange={(e) =>
+                  handleInputChange("idade", e.target.value)
+                }
+              />
+            ) : (
+              <p className="text-slate-600">{candidate.idade || "-"}</p>
+            )}
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* E-mail */}
             <div>
@@ -372,6 +408,27 @@ export default function CandidateDetail() {
                 />
               ) : (
                 <p className="text-slate-600 whitespace-pre-wrap">{candidate.cursos_certificacoes}</p>
+              )}
+            </div>
+
+            {/* Conhecimento Técnico */}
+            <div>
+              <label className="block text-sm font-medium text-slate-700 mb-2">
+                Conhecimento Técnico
+              </label>
+              {isEditing ? (
+                <textarea
+                  value={formData?.conhecimento_tecnico || ""}
+                  onChange={(e) =>
+                    handleInputChange("conhecimento_tecnico", e.target.value)
+                  }
+                  className="w-full p-2 border border-slate-300 rounded-md"
+                  rows={3}
+                />
+              ) : (
+                <p className="text-slate-600 whitespace-pre-wrap">
+                  {candidate.conhecimento_tecnico}
+                </p>
               )}
             </div>
 

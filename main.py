@@ -59,10 +59,10 @@ class BancoTalentosOrchestrator:
             self.stats['emails_processados'] = len(email_files)
             
             # Processar WhatsApp
-            self.logger.info("\nProcessando mensagens WhatsApp...")
-            whatsapp_files = process_whatsapp_messages()
-            all_files.extend(whatsapp_files)
-            self.stats['whatsapp_processados'] = len(whatsapp_files)
+            # self.logger.info("\nProcessando mensagens WhatsApp...")
+            # whatsapp_files = process_whatsapp_messages()
+            # all_files.extend(whatsapp_files)
+            # self.stats['whatsapp_processados'] = len(whatsapp_files)
             
             self.stats['arquivos_baixados'] = len(all_files)
             self.logger.info(f"\nTotal de arquivos capturados: {len(all_files)}")

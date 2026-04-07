@@ -1,0 +1,157 @@
+[2026-03-30 14:44:43,152] INFO - utils.logger - ================================================================================
+[2026-03-30 14:44:43,153] INFO - utils.logger - INICIANDO BANCO DE TALENTOS
+[2026-03-30 14:44:43,153] INFO - utils.logger - ================================================================================
+[2026-03-30 14:44:47,750] INFO - __main__ - ================================================================================
+[2026-03-30 14:44:47,750] INFO - __main__ -  INICIANDO BANCO DE TALENTOS
+[2026-03-30 14:44:47,751] INFO - __main__ - ================================================================================
+[2026-03-30 14:44:47,751] INFO - __main__ - 
+ETAPA 1: CAPTURANDO ARQUIVOS
+[2026-03-30 14:44:47,751] INFO - __main__ - --------------------------------------------------------------------------------
+[2026-03-30 14:44:50,026] INFO - __main__ - 
+Processando mensagens WhatsApp...
+[2026-03-30 14:44:56,035] INFO - config.ultramsg -  Ultramsg configurado com sucesso
+[2026-03-30 14:44:57,493] INFO - modules.whatsapp_reader -  Iniciando leitura de mensagens WhatsApp...
+[2026-03-30 15:04:28,054] INFO - utils.logger - ================================================================================
+[2026-03-30 15:04:28,055] INFO - utils.logger - INICIANDO BANCO DE TALENTOS
+[2026-03-30 15:04:28,055] INFO - utils.logger - ================================================================================
+[2026-03-30 15:04:31,626] INFO - __main__ - ================================================================================
+[2026-03-30 15:04:31,627] INFO - __main__ -  INICIANDO BANCO DE TALENTOS
+[2026-03-30 15:04:31,627] INFO - __main__ - ================================================================================
+[2026-03-30 15:04:31,627] INFO - __main__ - 
+ETAPA 1: CAPTURANDO ARQUIVOS
+[2026-03-30 15:04:31,628] INFO - __main__ - --------------------------------------------------------------------------------
+[2026-03-30 15:04:33,161] INFO - __main__ - 
+Processando mensagens WhatsApp...
+[2026-03-30 15:04:33,743] INFO - config.ultramsg -  Ultramsg configurado com sucesso
+[2026-03-30 15:04:33,744] INFO - modules.whatsapp_reader - Iniciando leitura do histórico completo do WhatsApp...
+[2026-03-30 15:04:53,633] INFO - modules.whatsapp_reader - Encontrados 8 chats para processar
+[2026-03-30 15:05:08,377] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 5519988118043@c.us
+[2026-03-30 15:05:24,323] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 5511919645640@c.us
+[2026-03-30 15:05:32,356] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 5511974997329@c.us
+[2026-03-30 15:05:35,963] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 5511923162266@c.us
+[2026-03-30 15:05:39,915] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 5519998824527@c.us
+[2026-03-30 15:05:40,465] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 0@c.us
+[2026-03-30 15:05:40,975] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 551637138007@c.us
+[2026-03-30 15:05:41,642] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 5519989333715@c.us
+[2026-03-30 15:05:46,310] INFO - modules.whatsapp_reader - Total de 583 mensagens encontradas no período
+[2026-03-30 15:06:33,493] INFO - modules.whatsapp_reader - Total de arquivos baixados do WhatsApp: 0
+[2026-03-30 15:06:49,625] INFO - __main__ - 
+Total de arquivos capturados: 0
+[2026-03-30 15:07:33,243] INFO - utils.logger - ================================================================================
+[2026-03-30 15:07:33,244] INFO - utils.logger - INICIANDO BANCO DE TALENTOS
+[2026-03-30 15:07:33,244] INFO - utils.logger - ================================================================================
+[2026-03-30 15:07:36,771] INFO - __main__ - ================================================================================
+[2026-03-30 15:07:36,771] INFO - __main__ -  INICIANDO BANCO DE TALENTOS
+[2026-03-30 15:07:36,772] INFO - __main__ - ================================================================================
+[2026-03-30 15:07:36,772] INFO - __main__ - 
+ETAPA 1: CAPTURANDO ARQUIVOS
+[2026-03-30 15:07:36,772] INFO - __main__ - --------------------------------------------------------------------------------
+[2026-03-30 15:07:39,480] INFO - __main__ - 
+Processando mensagens WhatsApp...
+[2026-03-30 15:07:40,753] INFO - config.ultramsg -  Ultramsg configurado com sucesso
+[2026-03-30 15:07:40,753] INFO - modules.whatsapp_reader - Iniciando leitura do histórico completo do WhatsApp...
+[2026-03-30 15:08:03,936] INFO - modules.whatsapp_reader - Encontrados 8 chats para processar
+[2026-03-30 15:08:17,880] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 5519988118043@c.us
+[2026-03-30 15:08:29,611] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 5511919645640@c.us
+[2026-03-30 15:08:33,567] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 5511974997329@c.us
+[2026-03-30 15:08:34,134] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 5511923162266@c.us
+[2026-03-30 15:08:34,647] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 5519998824527@c.us
+[2026-03-30 15:08:35,166] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 0@c.us
+[2026-03-30 15:08:35,673] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 551637138007@c.us
+[2026-03-30 15:08:36,227] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 5519989333715@c.us
+[2026-03-30 15:08:39,508] INFO - modules.whatsapp_reader - Total de 583 mensagens encontradas no período
+[2026-03-30 15:20:17,614] INFO - utils.logger - ================================================================================
+[2026-03-30 15:20:17,615] INFO - utils.logger - INICIANDO BANCO DE TALENTOS
+[2026-03-30 15:20:17,615] INFO - utils.logger - ================================================================================
+[2026-03-30 15:20:21,113] INFO - __main__ - ================================================================================
+[2026-03-30 15:20:21,114] INFO - __main__ -  INICIANDO BANCO DE TALENTOS
+[2026-03-30 15:20:21,114] INFO - __main__ - ================================================================================
+[2026-03-30 15:20:21,114] INFO - __main__ - 
+ETAPA 1: CAPTURANDO ARQUIVOS
+[2026-03-30 15:20:21,114] INFO - __main__ - --------------------------------------------------------------------------------
+[2026-03-30 15:20:22,952] INFO - __main__ - 
+Processando mensagens WhatsApp...
+[2026-03-30 15:20:23,446] INFO - config.ultramsg -  Ultramsg configurado com sucesso
+[2026-03-30 15:20:23,447] INFO - modules.whatsapp_reader - Iniciando leitura do histórico completo do WhatsApp...
+[2026-03-30 15:20:28,319] INFO - modules.whatsapp_reader - Encontrados 8 chats para processar
+[2026-03-30 15:20:28,320] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 5519988118043@c.us
+[2026-03-30 15:20:29,308] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 5511919645640@c.us
+[2026-03-30 15:20:29,935] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 5511974997329@c.us
+[2026-03-30 15:20:30,514] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 5511923162266@c.us
+[2026-03-30 15:20:31,142] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 5519998824527@c.us
+[2026-03-30 15:20:31,746] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 0@c.us
+[2026-03-30 15:20:32,375] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 551637138007@c.us
+[2026-03-30 15:20:33,035] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 5519989333715@c.us
+[2026-03-30 15:20:36,750] INFO - modules.whatsapp_reader - Total de 583 mensagens encontradas no período
+[2026-03-30 15:23:56,359] INFO - utils.logger - ================================================================================
+[2026-03-30 15:23:56,360] INFO - utils.logger - INICIANDO BANCO DE TALENTOS
+[2026-03-30 15:23:56,360] INFO - utils.logger - ================================================================================
+[2026-03-30 15:24:00,044] INFO - __main__ - ================================================================================
+[2026-03-30 15:24:00,045] INFO - __main__ -  INICIANDO BANCO DE TALENTOS
+[2026-03-30 15:24:00,045] INFO - __main__ - ================================================================================
+[2026-03-30 15:24:00,045] INFO - __main__ - 
+ETAPA 1: CAPTURANDO ARQUIVOS
+[2026-03-30 15:24:00,045] INFO - __main__ - --------------------------------------------------------------------------------
+[2026-03-30 15:24:02,025] INFO - __main__ - 
+Processando mensagens WhatsApp...
+[2026-03-30 15:24:03,901] INFO - config.ultramsg -  Ultramsg configurado com sucesso
+[2026-03-30 15:24:03,903] INFO - modules.whatsapp_reader - Iniciando leitura do histórico completo do WhatsApp...
+[2026-03-30 15:24:09,031] INFO - modules.whatsapp_reader - Encontrados 8 chats para processar
+[2026-03-30 15:24:09,032] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 5519988118043@c.us
+[2026-03-30 15:24:09,952] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 5511919645640@c.us
+[2026-03-30 15:24:10,554] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 5511974997329@c.us
+[2026-03-30 15:24:11,128] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 5511923162266@c.us
+[2026-03-30 15:24:11,716] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 5519998824527@c.us
+[2026-03-30 15:24:12,296] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 0@c.us
+[2026-03-30 15:24:12,860] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 551637138007@c.us
+[2026-03-30 15:24:13,486] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 5519989333715@c.us
+[2026-03-30 15:24:19,186] INFO - modules.whatsapp_reader - Total de 583 mensagens encontradas no período
+[2026-03-30 16:35:41,958] INFO - utils.logger - ================================================================================
+[2026-03-30 16:35:41,959] INFO - utils.logger - INICIANDO BANCO DE TALENTOS
+[2026-03-30 16:35:41,959] INFO - utils.logger - ================================================================================
+[2026-03-30 16:35:45,789] INFO - __main__ - ================================================================================
+[2026-03-30 16:35:45,789] INFO - __main__ -  INICIANDO BANCO DE TALENTOS
+[2026-03-30 16:35:45,789] INFO - __main__ - ================================================================================
+[2026-03-30 16:35:45,789] INFO - __main__ - 
+ETAPA 1: CAPTURANDO ARQUIVOS
+[2026-03-30 16:35:45,790] INFO - __main__ - --------------------------------------------------------------------------------
+[2026-03-30 16:35:45,790] INFO - __main__ - 
+Processando mensagens WhatsApp...
+[2026-03-30 16:35:48,290] INFO - config.ultramsg -  Ultramsg configurado com sucesso
+[2026-03-30 16:35:48,292] INFO - modules.whatsapp_reader - Iniciando leitura do histórico completo do WhatsApp...
+[2026-03-30 16:35:50,929] INFO - modules.whatsapp_reader - Encontrados 8 chats para processar
+[2026-03-30 16:35:50,929] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 5519988118043@c.us
+[2026-03-30 16:35:51,762] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 5511919645640@c.us
+[2026-03-30 16:35:52,385] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 5511974997329@c.us
+[2026-03-30 16:35:52,978] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 5511923162266@c.us
+[2026-03-30 16:35:53,555] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 5519998824527@c.us
+[2026-03-30 16:35:54,091] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 0@c.us
+[2026-03-30 16:35:54,593] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 551637138007@c.us
+[2026-03-30 16:35:55,168] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 5519989333715@c.us
+[2026-03-30 16:35:55,685] INFO - modules.whatsapp_reader - Total de 583 mensagens encontradas no período
+[2026-03-30 16:36:07,220] WARNING - modules.whatsapp_reader - Documento sem URL: sc_199020260201082641857.pdf
+[2026-03-30 16:57:53,903] WARNING - modules.whatsapp_reader - Documento sem URL: Nathalia Vieira_cv.pdf
+[2026-03-30 17:27:39,230] INFO - utils.logger - ================================================================================
+[2026-03-30 17:27:39,231] INFO - utils.logger - INICIANDO BANCO DE TALENTOS
+[2026-03-30 17:27:39,231] INFO - utils.logger - ================================================================================
+[2026-03-30 17:27:42,963] INFO - __main__ - ================================================================================
+[2026-03-30 17:27:42,963] INFO - __main__ -  INICIANDO BANCO DE TALENTOS
+[2026-03-30 17:27:42,963] INFO - __main__ - ================================================================================
+[2026-03-30 17:27:42,963] INFO - __main__ - 
+ETAPA 1: CAPTURANDO ARQUIVOS
+[2026-03-30 17:27:42,964] INFO - __main__ - --------------------------------------------------------------------------------
+[2026-03-30 17:27:42,964] INFO - __main__ - 
+Processando mensagens WhatsApp...
+[2026-03-30 17:27:45,210] INFO - config.ultramsg -  Ultramsg configurado com sucesso
+[2026-03-30 17:27:45,210] INFO - modules.whatsapp_reader - Iniciando leitura do histórico completo do WhatsApp...
+[2026-03-30 17:27:52,232] INFO - modules.whatsapp_reader - Encontrados 8 chats para processar
+[2026-03-30 17:27:52,233] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 5519988118043@c.us
+[2026-03-30 17:27:53,108] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 5511919645640@c.us
+[2026-03-30 17:27:53,665] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 5511974997329@c.us
+[2026-03-30 17:27:54,225] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 5511923162266@c.us
+[2026-03-30 17:27:54,757] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 5519998824527@c.us
+[2026-03-30 17:27:55,339] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 0@c.us
+[2026-03-30 17:27:55,919] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 551637138007@c.us
+[2026-03-30 17:27:56,477] INFO - modules.whatsapp_reader - Buscando mensagens do chat: 5519989333715@c.us
+[2026-03-30 17:27:57,026] INFO - modules.whatsapp_reader - Total de 583 mensagens encontradas no período
+[2026-03-30 17:28:32,516] WARNING - modules.whatsapp_reader - Documento sem URL: sc_199020260201082641857.pdf

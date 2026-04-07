@@ -130,13 +130,15 @@ class DeduplicationHandler:
                 'email': Validators.normalize_email(candidate_data.get('Email', '')),
                 'telefone': Validators.normalize_phone(candidate_data.get('Telefone', '')),
                 'endereco': candidate_data.get('Endereco', '').strip(),
-                'data_nascimento': candidate_data.get('DataNascimento', ''),
+                'nacionalidade': Validators.normalize_phone(candidate_data.get('Nacionalidade', '')),
+                'idade': candidate_data.get('Idade', ''),
                 'linkedin': candidate_data.get('Link_Linkedin', '').strip(),
                 'skills': candidate_data.get('Skil', '').strip(),
                 'formacao_academica': candidate_data.get('Formacao_Academica', '').strip(),
-                'cursos_certificacoes': candidate_data.get('Cursos_Certificacoes', '').strip(),
                 'nivel_ingles': candidate_data.get('Nivel_Idioma_Ingles', '').strip(),
                 'nivel_espanhol': candidate_data.get('Nivel_Idioma_Espanhol', '').strip(),
+                'cursos_certificacoes': candidate_data.get('Cursos_Certificacoes', '').strip(),
+                'conhecimento_tecnico': candidate_data.get('Conhecimento_Tecnico', '').strip(),
                 'experiencia_profissional': candidate_data.get('Experiencia_Profissional', '').strip(),
                 'hash_documento': document_hash,
                 'fonte': source,
@@ -256,7 +258,7 @@ class DeduplicationHandler:
             existing = self.find_duplicate(candidate_data, document_hash)
             
             if existing:
-                # Verificar se h mudanas
+                # Verificar se ha mudancas
                 if self.has_changes(existing, candidate_data):
                     # Atualizar registro
                     return self.update_candidate(

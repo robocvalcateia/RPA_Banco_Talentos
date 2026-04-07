@@ -98,10 +98,10 @@ class Validators:
         if phone and not Validators.is_valid_phone(phone):
             errors.append(f"Telefone invlido: {phone}")
         
-        # LinkedIn deve ser vlido se fornecido
-        linkedin = data.get('Link_Linkedin', '')
-        if linkedin and not Validators.is_valid_linkedin_url(linkedin):
-            errors.append(f"URL do LinkedIn invlida: {linkedin}")
+        # # LinkedIn deve ser valido se fornecido
+        # linkedin = data.get('Link_Linkedin', '')
+        # if linkedin and not Validators.is_valid_linkedin_url(linkedin):
+        #     errors.append(f"URL do LinkedIn invlida: {linkedin}")
         
         return errors
     

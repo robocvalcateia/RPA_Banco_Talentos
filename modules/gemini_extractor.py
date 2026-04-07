@@ -19,16 +19,18 @@ RETORNE APENAS UM JSON VÁLIDO, SEM TEXTO ADICIONAL, SEM EXPLICAÇÕES, SEM MARK
 
 O JSON DEVE CONTER EXATAMENTE AS SEGUINTES CHAVES (todas obrigatórias):
 - Nome
+- Nacionalidade
+- Idade
 - Endereco
 - Telefone
 - Email
 - Link_Linkedin
-- DataNascimento
 - Skil
 - Formacao_Academica
-- Cursos_Certificacoes
 - Nivel_Idioma_Ingles
 - Nivel_Idioma_Espanhol
+- Cursos_Certificacoes
+- Conhecimento_Tecnico
 - Experiencia_Profissional
 
 REGRAS IMPORTANTES:
@@ -47,6 +49,12 @@ Nome:
 - Nome completo do candidato
 - Localizado no topo do currículo
 
+Nacionalidade:
+- Nacionalidade do Canditado, caso não tenha nada considerar Brasileiro
+
+Idade:
+- Caso não exista, calcular a partir da data de nascimento
+
 Endereco:
 - Cidade, estado ou endereço completo
 
@@ -59,21 +67,14 @@ Email:
 
 Link_Linkedin:
 - Link_Linkedin
-- Caso não exista, deixar em branco
-
-DataNascimento:
-- Priorizar data no formato dd/MM/AAAA
-- Caso não exista, usar idade (ex: 30 anos)
+- Caso não exista o que for encontrado não corresponder a uma url, deixar em branco
 
 Skil:
-- Perfil Profissional
+- Resumo das qualificações profissionais
 
 Formacao_Academica:
 - Formação principal (graduação, pós, etc.)
 - Maior nível (Ensino Médio, Superior, Pós, MBA, etc.)
-
-Cursos_Certificacoes:
-- Cursos complementares separados por vírgula
 
 Nivel_Idioma_Ingles:
 - Nivel_Idioma_Ingles
@@ -83,6 +84,12 @@ Nivel_Idioma_Espanhol:
 - Nivel_Idioma_Espanhol
 - Caso não exista, deixar em branco
 
+Cursos_Certificacoes:
+- Cursos complementares separados por vírgula
+
+Conhecimento_Tecnico:
+- Lista de conhecimento técnico profissional
+
 Experiencia_Profissional
 - Resumo das experiências no formato:
 - Empresa - Cargo (Período) | Empresa - Cargo (Período)
@@ -90,16 +97,18 @@ Experiencia_Profissional
 FORMATO FINAL OBRIGATÓRIO:
 {{
   "Nome": "",
+  "Nacionalidade": "",
+  "Idade": "",
   "Endereco": "",
   "Telefone": "",
   "Email": "",
   "Link_Linkedin": "",
-  "DataNascimento": "",
   "Skil": "",
   "Formacao_Academica": "",
-  "Cursos_Certificacoes": "",
   "Nivel_Idioma_Ingles": "",
   "Nivel_Idioma_Espanhol": "",
+  "Cursos_Certificacoes": "",
+  "Conhecimento_Tecnico": "",
   "Experiencia_Profissional": ""
 }}"""
     

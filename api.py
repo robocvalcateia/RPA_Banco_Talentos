@@ -45,7 +45,6 @@ USERS_DB = {
 # ============================================
 
 def serialize_doc(doc):
-
     """Serializa documento do MongoDB para JSON"""
     return {
         "_id": str(doc.get("_id", "")),
@@ -53,13 +52,16 @@ def serialize_doc(doc):
         "email": doc.get("email", ""),
         "telefone": doc.get("telefone", ""),
         "endereco": doc.get("endereco", ""),
+        "nacionalidade": doc.get("nacionalidade", ""),
+        "idade": doc.get("idade", ""),
+        "linkedin": doc.get("linkedin", ""),
         "skills": doc.get("skills", ""),
         "formacao_academica": doc.get("formacao_academica", ""),
-        "cursos_certificacoes": doc.get("cursos_certificacoes", ""),
         "nivel_ingles": doc.get("nivel_ingles", ""),
         "nivel_espanhol": doc.get("nivel_espanhol", ""),
+        "cursos_certificacoes": doc.get("cursos_certificacoes", ""),
+        "conhecimento_tecnico": doc.get("conhecimento_tecnico", ""),
         "experiencia_profissional": doc.get("experiencia_profissional", ""),
-        "linkedin": doc.get("linkedin", ""),
         "fonte": doc.get("fonte", "email"),
         "data_criacao": doc.get("data_criacao", ""),
         "data_atualizacao": doc.get("data_atualizacao", ""),
