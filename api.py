@@ -259,43 +259,6 @@ def get_candidatos():
             'error': str(e)
         }), 500
 
-@app.route('/api/candidatos/<id>', methods=['GET'])
-@token_required
-def get_candidato(id):
-    """
-    Retorna detalhes de um candidato específico
-    
-    Headers obrigatório:
-    Authorization: Bearer <token_jwt>
-    
-    Retorna:
-    {
-        "success": true,
-        "data": {...}
-    }
-    """
-    try:
-        handler = get_mongodb_handler()
-        candidato = handler.get_candidate_by_id(id)
-        
-        if candidato:
-            return jsonify({
-                'success': True,
-                'data': serialize_doc(candidato)
-            }), 200
-        else:
-            return jsonify({
-                'success': False,
-                'error': 'Candidato não encontrado'
-            }), 404
-    
-    except Exception as e:
-        print(f"❌ Erro ao buscar candidato: {str(e)}")
-        return jsonify({
-            'success': False,
-            'error': str(e)
-        }), 500
-
 @app.route('/api/estatisticas', methods=['GET'])
 @token_required
 def get_estatisticas():
