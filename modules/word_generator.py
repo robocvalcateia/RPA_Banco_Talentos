@@ -51,6 +51,9 @@ class WordGenerator:
         
         # Substituir placeholders
         placeholders = template_info['placeholders']
+        print(f'placeholders: {placeholders}')
+        print(f'candidate_data: {candidate_data}')
+        candidate_data
         for placeholder, field_name in placeholders.items():
             value = candidate_data.get(field_name, "")
             self._replace_text_in_document(doc, placeholder, str(value))
