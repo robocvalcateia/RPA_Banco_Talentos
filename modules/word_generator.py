@@ -41,6 +41,7 @@ class WordGenerator:
         if not template_info:
             raise ValueError(f"Template '{template_id}' não encontrado")
         
+        print(f'Caminho arquivo:{self.templates_dir}')
         # Carregar template
         template_path = os.path.join(
             self.templates_dir,
