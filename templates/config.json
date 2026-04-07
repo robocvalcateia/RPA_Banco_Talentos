@@ -1,25 +1,30 @@
 {
   "templates": [
     {
-      "id": "cv",
-      "nome": "Currículo Padrão",
+      "id": "CV",
+      "nome": "Template_01",
       "arquivo": "template_1_cv.docx",
       "placeholders": {
         "NOME": "nome",
         "EMAIL": "email",
+        "NACIONALIDADE": "nacionalidade",
+        "IDADE": "idade",
         "TELEFONE": "telefone",
         "ENDERECO": "endereco",
         "SKILLS": "skills",
-        "FORMACAO": "formacao_academica",
-        "EXPERIENCIA": "experiencia_profissional",
+        "CONHECIMENTO_TECNICO": "conhecimento_tecnico",
+        "FORMACAO_ACADEMICA": "formacao_academica",
+        "EXPERIENCIA_PROFISSIONAL": "experiencia_profissional",
         "CURSOS": "cursos_certificacoes",
-        "LINKEDIN": "linkedin"
+        "LINKEDIN": "linkedin",
+        "NIVEL_INGLES": "nivel_ingles",
+        "NIVEL_ESPANHOL": "nivel_espanhol"
       }
     },
     {
-      "id": "carta",
-      "nome": "Carta de Apresentação",
-      "arquivo": "template_2_carta_apresentacao.docx",
+      "id": "CV",
+      "nome": "Template_02",
+      "arquivo": "template_2_cv.docx",
       "placeholders": {
         "NOME_CANDIDATO": "nome",
         "SKILLS_PRINCIPAIS": "skills",
