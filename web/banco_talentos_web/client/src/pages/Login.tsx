@@ -88,13 +88,23 @@ export default function Login() {
       <div className="w-full max-w-md">
         {/* Logo/Título */}
         <div className="text-center mb-8">
+          <img
+            src="/logo_alcateia.jpg"
+            alt="JCBuso Tecnologia"
+            className="mx-auto mb-6 h-24 object-contain"
+          />
+
           <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600 rounded-lg mb-4">
             <Lock className="w-8 h-8 text-white" />
           </div>
-          <h1 className="text-3xl font-bold text-slate-900">Banco de Talentos</h1>
-          <p className="text-slate-600 mt-2">Faça login para acessar</p>
-        </div>
 
+          <h1 className="text-3xl font-bold text-slate-900">
+            Banco de Talentos
+          </h1>
+          <p className="text-slate-600 mt-2">
+            Faça login para acessar
+          </p>
+        </div>
         {/* Card de Login */}
         <Card className="p-8 shadow-lg border-0">
           <form onSubmit={handleSubmit} className="space-y-6">
