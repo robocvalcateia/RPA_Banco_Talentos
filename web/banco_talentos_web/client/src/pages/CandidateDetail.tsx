@@ -222,7 +222,7 @@ const handleSave = async () => {
           <Button
             onClick={() => setLocation("/")}
             variant="outline"
-            className="mb-4 gap-2"
+            className="border-[#08B79B] text-[#08B79B] hover:bg-[#08B79B] hover:text-white shadow-sm"
           >
             <ArrowLeft className="w-4 h-4" />
             Voltar
