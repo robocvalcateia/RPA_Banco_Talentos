@@ -86,9 +86,10 @@ class WordGenerator:
         if placeholder not in full_text:
             return
 
-        # se valor vazio remove a linha inteira
+        # remove o parágrafo inteiro se valor estiver vazio
         if replacement is None or str(replacement).strip() == "":
-            paragraph.text = ""
+            p = paragraph._element
+            p.getparent().remove(p)
             return
 
         new_text = full_text.replace(placeholder, str(replacement))
