@@ -302,18 +302,18 @@ class MongoDBHandler:
                     'Estado Civil': candidate.get('estado_civil', ''),
                     'Idade': candidate.get('idade', ''),
                     'Telefone': candidate.get('telefone', ''),
-                    'Endereo': candidate.get('endereco', ''),
+                    'Endereco': candidate.get('endereco', ''),
                     'Data Nascimento': candidate.get('data_nascimento', ''),
                     'LinkedIn': candidate.get('linkedin', ''),
                     'Skills': candidate.get('skills', ''),
-                    'Formao': candidate.get('formacao_academica', ''),
+                    'Formacao': candidate.get('formacao_academica', ''),
                     'Cursos': candidate.get('cursos_certificacoes', ''),
-                    'Ingls': candidate.get('nivel_ingles', ''),
+                    'Ingles': candidate.get('nivel_ingles', ''),
                     'Espanhol': candidate.get('nivel_espanhol', ''),
                     'Experincia': candidate.get('experiencia_profissional', ''),
                     'Fonte': candidate.get('fonte', ''),
-                    'Data Cricao': candidate.get('data_criacao', ''),
-                    'Data Atualizao': candidate.get('data_atualizacao', '')
+                    'Data Criacao': candidate.get('data_criacao', ''),
+                    'Data Atualizacao': candidate.get('data_atualizacao', '')
                 })
             
             logger.info(f" {len(exported)} candidatos exportados")
