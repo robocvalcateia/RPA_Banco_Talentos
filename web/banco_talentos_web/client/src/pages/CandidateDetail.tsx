@@ -244,7 +244,7 @@ const handleSave = async () => {
             onClick={() => setLocation("/")}
             variant="outline"
             size="sm"
-            className="gap-2"
+            className="border-[#08B79B] text-[#08B79B] hover:bg-[#08B79B] hover:text-white shadow-sm"
           >
             <ArrowLeft className="w-4 h-4" />
             Voltar
