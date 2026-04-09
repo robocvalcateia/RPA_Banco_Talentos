@@ -84,7 +84,7 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-[#f8fffd] to-[#dff7f1] flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         {/* Logo/Título */}
         <div className="text-center mb-8">
@@ -106,7 +106,7 @@ export default function Login() {
           </p>
         </div>
         {/* Card de Login */}
-        <Card className="p-8 shadow-lg border-0">
+        <Card className="p-8 shadow-2xl border border-white/40 bg-white/95 backdrop-blur-md rounded-2xl">
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Campo E-mail */}
             <div>
