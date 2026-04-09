@@ -94,7 +94,7 @@ export default function Login() {
             className="mx-auto mb-6 w-100 object-contain"
           />
 
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600 rounded-lg mb-4">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-[#08B79B] rounded-lg mb-4 shadow-lg">
             <Lock className="w-8 h-8 text-white" />
           </div>
 
@@ -156,7 +156,7 @@ export default function Login() {
             {/* Botão de Login */}
             <Button
               type="submit"
-              className="w-full h-10 bg-blue-600 hover:bg-blue-700 text-white font-medium"
+              className="w-full h-10 bg-[#08B79B] hover:bg-[#07967f] text-white font-medium transition-all duration-300"
               disabled={loading}
             >
               {loading ? "Entrando..." : "Entrar"}
