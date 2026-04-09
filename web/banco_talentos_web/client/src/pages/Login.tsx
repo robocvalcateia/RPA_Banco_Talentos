@@ -89,7 +89,7 @@ export default function Login() {
         {/* Logo/Título */}
         <div className="text-center mb-8">
           <img
-            src="/logo_alcateia.jpg"
+            src="/logo_alcateia.png"
             alt="JCBuso Tecnologia"
             className="mx-auto mb-6 w-72 rounded-2xl shadow-md"
           />
