@@ -140,6 +140,7 @@ def serialize_doc(doc):
         "telefone": doc.get("telefone", ""),
         "endereco": doc.get("endereco", ""),
         "nacionalidade": doc.get("nacionalidade", ""),
+        "estado_civil": doc.get("estado_civil", ""),
         "idade": doc.get("idade", ""),
         "linkedin": doc.get("linkedin", ""),
         "skills": doc.get("skills", ""),

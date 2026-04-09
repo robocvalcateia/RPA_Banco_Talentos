@@ -20,6 +20,7 @@ RETORNE APENAS UM JSON VÁLIDO, SEM TEXTO ADICIONAL, SEM EXPLICAÇÕES, SEM MARK
 O JSON DEVE CONTER EXATAMENTE AS SEGUINTES CHAVES (todas obrigatórias):
 - Nome
 - Nacionalidade
+- Estado Civil
 - Idade
 - Endereco
 - Telefone
@@ -51,6 +52,9 @@ Nome:
 
 Nacionalidade:
 - Nacionalidade do Canditado, caso não tenha nada considerar Brasileiro
+
+Estado Civil:
+- Estado Civil do Canditado, caso não tenha nada considerar vazio
 
 Idade:
 - Caso não exista, calcular a partir da data de nascimento
@@ -98,6 +102,7 @@ FORMATO FINAL OBRIGATÓRIO:
 {{
   "Nome": "",
   "Nacionalidade": "",
+  "Estado_Civil": "",
   "Idade": "",
   "Endereco": "",
   "Telefone": "",

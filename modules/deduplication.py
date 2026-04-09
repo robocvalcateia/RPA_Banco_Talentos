@@ -131,6 +131,7 @@ class DeduplicationHandler:
                 'telefone': Validators.normalize_phone(candidate_data.get('Telefone', '')),
                 'endereco': candidate_data.get('Endereco', '').strip(),
                 'nacionalidade': Validators.normalize_phone(candidate_data.get('Nacionalidade', '')),
+                'estado_civil': Validators.normalize_phone(candidate_data.get('estado_civil', '')),
                 'idade': candidate_data.get('Idade', ''),
                 'linkedin': candidate_data.get('Link_Linkedin', '').strip(),
                 'skills': candidate_data.get('Skil', '').strip(),
