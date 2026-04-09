@@ -257,6 +257,7 @@ const handleSave = async () => {
                 onClick={() => handleGenerateDocument(template.id)}
                 disabled={generatingDoc}
                 variant="outline"
+                className="border-[#08B79B] text-[#08B79B] hover:bg-[#08B79B] hover:text-white shadow-sm"
               >
                 📄 {template.nome}
               </Button>
@@ -267,7 +268,7 @@ const handleSave = async () => {
               onClick={() => setIsEditing(true)}
               variant="default"
               size="sm"
-              className="gap-2"
+              className="border-[#08B79B] text-[#08B79B] hover:bg-[#08B79B] hover:text-white shadow-sm"
             >
               <Edit2 className="w-4 h-4" />
               Editar
@@ -279,7 +280,7 @@ const handleSave = async () => {
                 disabled={isSaving}
                 variant="default"
                 size="sm"
-                className="gap-2"
+                className="border-[#08B79B] text-[#08B79B] hover:bg-[#08B79B] hover:text-white shadow-sm"
               >
                 {isSaving ? (
                   <>
@@ -298,7 +299,7 @@ const handleSave = async () => {
                 disabled={isSaving}
                 variant="outline"
                 size="sm"
-                className="gap-2"
+                className="border-[#08B79B] text-[#08B79B] hover:bg-[#08B79B] hover:text-white shadow-sm"
               >
                 <X className="w-4 h-4" />
                 Cancelar
