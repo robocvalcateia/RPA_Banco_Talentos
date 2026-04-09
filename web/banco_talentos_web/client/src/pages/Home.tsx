@@ -146,7 +146,9 @@ export default function Home() {
   };
 
   const getSourceBadgeColor = (source: string) => {
-    return source === "email" ? "bg-blue-100 text-blue-800" : "bg-green-100 text-green-800";
+    return source === "email"
+      ? "bg-[#e8faf6] text-[#087c69]"
+      : "bg-[#dff7f1] text-[#065f52]";
   };
 
   const getSourceLabel = (source: string) => {
@@ -167,7 +169,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       {/* Header */}
-      <header className="bg-white border-b border-slate-200 sticky top-0 z-10">
+      <header className="bg-white/95 backdrop-blur-md border-b border-[#d9f7ef] sticky top-0 z-10 shadow-sm">
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center justify-between mb-6">
             <div>
@@ -190,7 +192,7 @@ export default function Home() {
               </Button>
               <div className="text-right">
                 <div className="text-sm text-slate-600">Total de Candidatos</div>
-                <div className="text-2xl font-bold text-blue-600">{stats.total}</div>
+                <div className="text-2xl font-bold text-[#08B79B]">{stats.total}</div>
               </div>
             </div>
           </div>
@@ -201,11 +203,11 @@ export default function Home() {
               <div className="text-sm text-slate-600">Total</div>
               <div className="text-2xl font-bold text-slate-900 mt-1">{stats.total}</div>
             </Card>
-            <Card className="p-4 bg-blue-50 border-blue-200">
+            <Card className="p-4 bg-[#e8faf6] border-[#b8eee2] shadow-sm hover:shadow-md transition-all">
               <div className="text-sm text-blue-600">📧 E-mail</div>
               <div className="text-2xl font-bold text-blue-900 mt-1">{stats.email}</div>
             </Card>
-            <Card className="p-4 bg-green-50 border-green-200">
+            <Card className="p-4 bg-[#f0fdf9] border-[#c8f5ea] shadow-sm hover:shadow-md transition-all">
               <div className="text-sm text-green-600">💬 WhatsApp</div>
               <div className="text-2xl font-bold text-green-900 mt-1">{stats.whatsapp}</div>
             </Card>
@@ -226,7 +228,7 @@ export default function Home() {
               onClick={() =>setFilterType(filterType === "nome"? "skill": filterType === "skill"? "endereco": "nome")}
               variant="outline"
               size="sm"
-              className="min-w-max"
+              className="min-w-max border-[#08B79B] text-[#08B79B] hover:bg-[#08B79B] hover:text-white"
             >
               {filterType === "nome"? "Buscar por Skill": filterType === "skill"? "Buscar por Endereço": "Buscar por Nome"}
             </Button>
@@ -251,7 +253,7 @@ export default function Home() {
             {filteredCandidates.map((candidate) => (
               <Card
                 key={candidate._id}
-                className="p-6 hover:shadow-lg transition-shadow cursor-pointer"
+                className="p-6 border border-[#d9f7ef] hover:border-[#08B79B] hover:shadow-xl transition-all duration-300 cursor-pointer rounded-2xl bg-white"
                 onClick={() => setLocation(`/candidato/${candidate._id}`)}
               >
                 <div className="flex items-start justify-between mb-4">
@@ -294,7 +296,7 @@ export default function Home() {
                         .map((skill, idx) => (
                           <span
                             key={idx}
-                            className="px-2 py-1 text-xs bg-slate-100 text-slate-700 rounded-md break-words"
+                            className="px-2 py-1 text-xs bg-[#e8faf6] text-[#087c69] rounded-md border border-[#b8eee2]"
                           >
                             {skill.trim()}
                           </span>

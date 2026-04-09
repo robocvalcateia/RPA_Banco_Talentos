@@ -310,7 +310,7 @@ const handleSave = async () => {
 
       {/* Conteúdo */}
       <main className="max-w-4xl mx-auto px-4 py-8">
-        <Card className="p-8">
+        <Card className="p-8 rounded-2xl shadow-lg border border-[#d9f7ef]">
           {/* Título e Badge */}
           <div className="flex items-start justify-between mb-8">
             <div>
