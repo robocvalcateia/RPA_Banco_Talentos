@@ -153,13 +153,11 @@ export default function Login() {
             </Button>
 
             {/* Informações de Teste */}
-            <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg">
-              <p className="text-xs font-medium text-blue-900 mb-2">Credenciais de Teste:</p>
-              <div className="text-xs text-blue-800 space-y-1">
-                <p>📧 admin@alcateia.com.br / admin123</p>
-                <p>📧 user@alcateia.com.br / user123</p>
-                <p>📧 test@test.com / test123</p>
-              </div>
+            <div className="p-3 bg-slate-50 border border-slate-200 rounded-lg">
+              <p className="text-xs text-slate-600 text-center">
+                Acesso restrito a usuários autorizados.
+                Em caso de dúvidas, contate o administrador do sistema.
+              </p>
             </div>
           </form>
         </Card>
