@@ -192,7 +192,7 @@ export default function Home() {
               </Button>
               <div className="text-right">
                 <div className="text-sm text-slate-600">Total de Candidatos</div>
-                <div className="text-2xl font-bold text-[#08B79B]">{stats.total}</div>
+                <div className="text-2xl font-bold text-slate-900">{stats.total}</div>
               </div>
             </div>
           </div>
