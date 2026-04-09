@@ -364,6 +364,25 @@ useEffect(() => {
               )}
             </div>
 
+            {/* Estado Civil */}
+            <div>
+              <label className="block text-sm font-medium text-slate-700 mb-2">
+                Estado Civil
+              </label>
+              {isEditing ? (
+                <Input
+                  value={formData?.estado_civil || ""}
+                  onChange={(e) =>
+                    handleInputChange("estado_civil", e.target.value)
+                  }
+                />
+              ) : (
+                <p className="text-slate-600">
+                  {candidate.estado_civil || "-"}
+                </p>
+              )}
+            </div>
+
             {/* E-mail */}
             <div>
               <label className="block text-sm font-medium text-slate-700 mb-2">E-mail</label>
