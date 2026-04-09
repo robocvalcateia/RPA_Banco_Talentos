@@ -291,14 +291,15 @@ export default function Home() {
                     <p className="text-xs font-medium text-slate-700 mb-2">Skills</p>
                     <div className="mt-2 text-sm text-slate-600 leading-relaxed">
                       {candidate.skills
-                        ?.split(/,|\n|\|/) // separa por vírgula, quebra de linha ou |
+                        ?.split(/,|\n|\|/)
                         .slice(0, 5)
                         .map((skill, idx) => (
                           <span
                             key={idx}
-                            className="px-2 py-1 text-xs bg-[#e8faf6] text-[#087c69] rounded-md border border-[#b8eee2]"
+                            className="text-sm text-[#08B79B] leading-relaxed mr-2"
                           >
                             {skill.trim()}
+                            {idx < 4 ? " •" : ""}
                           </span>
                         ))}
 
