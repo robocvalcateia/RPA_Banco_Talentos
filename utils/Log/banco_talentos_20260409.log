@@ -1,0 +1,262 @@
+[2026-04-09 17:45:15,080] INFO - utils.logger - ================================================================================
+[2026-04-09 17:45:15,081] INFO - utils.logger - INICIANDO BANCO DE TALENTOS
+[2026-04-09 17:45:15,081] INFO - utils.logger - ================================================================================
+[2026-04-09 17:45:19,872] INFO - __main__ - ================================================================================
+[2026-04-09 17:45:19,872] INFO - __main__ -  INICIANDO BANCO DE TALENTOS
+[2026-04-09 17:45:19,873] INFO - __main__ - ================================================================================
+[2026-04-09 17:45:19,873] INFO - __main__ - 
+ETAPA 1: CAPTURANDO ARQUIVOS
+[2026-04-09 17:45:19,873] INFO - __main__ - --------------------------------------------------------------------------------
+[2026-04-09 17:45:19,873] INFO - __main__ - 
+Processando e-mails...
+[2026-04-09 17:45:20,368] INFO - config.microsoft_graph -  Microsoft Graph configurado com sucesso
+[2026-04-09 17:45:20,369] INFO - modules.email_reader -  Iniciando leitura de e-mails...
+[2026-04-09 17:45:20,585] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-09 17:45:20,929] INFO - modules.email_reader -  4 e-mails encontrados
+[2026-04-09 17:45:20,930] INFO - modules.email_reader -  Processando e-mail: cv teste
+[2026-04-09 17:45:20,930] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-09 17:45:21,379] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-09 17:45:21,752] INFO - utils.file_handler -  Arquivo salvo: c:\RPA\RPA_Banco_Talentos\utils\Temp\email\CV_Antônio Miguel_Dev_Pleno.pdf
+[2026-04-09 17:45:21,753] INFO - modules.email_reader -  Anexo baixado: CV_Antônio Miguel_Dev_Pleno.pdf
+[2026-04-09 17:45:21,753] INFO - modules.email_reader -  Processando e-mail: Teste CV
+[2026-04-09 17:45:21,754] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-09 17:45:22,338] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-09 17:45:22,839] INFO - utils.file_handler -  Arquivo salvo: c:\RPA\RPA_Banco_Talentos\utils\Temp\email\CV_William Blech Sister_Dev_Senior.pdf
+[2026-04-09 17:45:22,839] INFO - modules.email_reader -  Anexo baixado: CV_William Blech Sister_Dev_Senior.pdf
+[2026-04-09 17:45:22,840] INFO - modules.email_reader -  Processando e-mail: Curriculo Teste
+[2026-04-09 17:45:22,840] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-09 17:45:23,257] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-09 17:45:23,617] INFO - utils.file_handler -  Arquivo salvo: c:\RPA\RPA_Banco_Talentos\utils\Temp\email\CurriculoJoaoPedroScottiniProfissional.pdf
+[2026-04-09 17:45:23,617] INFO - modules.email_reader -  Anexo baixado: CurriculoJoaoPedroScottiniProfissional.pdf
+[2026-04-09 17:45:23,618] INFO - modules.email_reader -  Processando e-mail: Teste E-mail
+[2026-04-09 17:45:23,618] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-09 17:45:24,014] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-09 17:45:24,395] INFO - utils.file_handler -  Arquivo salvo: c:\RPA\RPA_Banco_Talentos\utils\Temp\email\Nathalia Vieira_cv.pdf
+[2026-04-09 17:45:24,396] INFO - modules.email_reader -  Anexo baixado: Nathalia Vieira_cv.pdf
+[2026-04-09 17:45:24,396] INFO - modules.email_reader -  Total de arquivos baixados do e-mail: 4
+[2026-04-09 17:45:27,411] INFO - __main__ - 
+Total de arquivos capturados: 4
+[2026-04-09 17:45:27,411] INFO - __main__ - 
+ETAPA 2: PROCESSANDO ARQUIVOS
+[2026-04-09 17:45:27,412] INFO - __main__ - --------------------------------------------------------------------------------
+[2026-04-09 17:45:27,412] INFO - __main__ - 
+Processando: CV_Antônio Miguel_Dev_Pleno.pdf
+[2026-04-09 17:45:27,439] INFO - __main__ -  Extraindo dados com Gemini...
+[2026-04-09 17:45:29,518] INFO - config.gemini -  Gemini API configurada com sucesso
+[2026-04-09 17:45:29,519] INFO - modules.gemini_extractor -  Processando PDF (tentativa 1/4): c:\RPA\RPA_Banco_Talentos\utils\Temp\email\CV_Antônio Miguel_Dev_Pleno.pdf
+[2026-04-09 17:45:30,284] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+[2026-04-09 17:45:31,177] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AMNfjG1K568JBqqr8xkDwiCGs6ukfEpDrjx_v3NtOeWq3_fgSpxWvsqWKQ1RKVOFQSyVQK0z9yy06GKBybdOPlNDGhqL0STPK4fWpXoMGUEkKQ&upload_protocol=resumable "HTTP/1.1 200 OK"
+[2026-04-09 17:45:31,179] INFO - modules.gemini_extractor -  PDF enviado para Gemini
+[2026-04-09 17:45:31,179] INFO - google_genai.models - AFC is enabled with max remote calls: 10.
+[2026-04-09 17:45:35,179] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+[2026-04-09 17:45:35,182] INFO - modules.gemini_extractor -  Dados extraídos com sucesso
+[2026-04-09 17:45:35,182] INFO - __main__ -  Dados extraídos: Antônio Miguel Costa Junior
+[2026-04-09 17:45:35,570] INFO - config.mongodb -  Conectado ao MongoDB: Banco_de_Talentos
+[2026-04-09 17:45:35,661] INFO - config.mongodb -  ndices criados/verificados no MongoDB
+[2026-04-09 17:45:37,827] INFO - modules.deduplication -  Duplicata encontrada por hash: 5a6ac819c67878872fadbe64bbc5fec2f59c54e58880e5e781ab995df5cdc318
+[2026-04-09 17:45:37,828] INFO - modules.deduplication -  Mudana detectada em Telefone
+[2026-04-09 17:45:37,844] INFO - modules.deduplication -  Candidato atualizado: Antônio Miguel Costa Junior
+[2026-04-09 17:45:38,757] INFO - __main__ -  Candidato atualizado: Antônio Miguel Costa Junior
+[2026-04-09 17:45:38,757] INFO - __main__ - 
+Processando: CV_William Blech Sister_Dev_Senior.pdf
+[2026-04-09 17:45:38,779] INFO - __main__ -  Extraindo dados com Gemini...
+[2026-04-09 17:45:39,862] INFO - modules.gemini_extractor -  Processando PDF (tentativa 1/4): c:\RPA\RPA_Banco_Talentos\utils\Temp\email\CV_William Blech Sister_Dev_Senior.pdf
+[2026-04-09 17:45:40,546] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+[2026-04-09 17:45:41,604] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AMNfjG343jW3NJ9QjFGXPQYR6QTpEN-iwtZPlO-t9HFDHknib43vhO0EIZHls12O0Ic-z0eXkuLy3cnVGsDytpwh8GY-pykQi7KB5pqs9Y5U8BI&upload_protocol=resumable "HTTP/1.1 200 OK"
+[2026-04-09 17:45:41,607] INFO - modules.gemini_extractor -  PDF enviado para Gemini
+[2026-04-09 17:45:41,607] INFO - google_genai.models - AFC is enabled with max remote calls: 10.
+[2026-04-09 17:45:46,017] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+[2026-04-09 17:45:46,020] INFO - modules.gemini_extractor -  Dados extraídos com sucesso
+[2026-04-09 17:45:46,020] INFO - __main__ -  Dados extraídos: William Blech Sister
+[2026-04-09 17:45:51,399] INFO - modules.deduplication -  Duplicata encontrada por hash: cc26aacfc86c9869ba399bf540d4058ec3354f302c278119abfc6b9b578eb355
+[2026-04-09 17:45:53,655] INFO - modules.deduplication -  Mudana detectada em Email
+[2026-04-09 17:45:53,672] INFO - modules.deduplication -  Candidato atualizado: William Blech Sister
+[2026-04-09 17:46:01,609] INFO - __main__ -  Candidato atualizado: William Blech Sister
+[2026-04-09 17:46:01,609] INFO - __main__ - 
+Processando: CurriculoJoaoPedroScottiniProfissional.pdf
+[2026-04-09 17:46:01,623] INFO - __main__ -  Extraindo dados com Gemini...
+[2026-04-09 17:46:04,574] INFO - modules.gemini_extractor -  Processando PDF (tentativa 1/4): c:\RPA\RPA_Banco_Talentos\utils\Temp\email\CurriculoJoaoPedroScottiniProfissional.pdf
+[2026-04-09 17:46:05,505] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+[2026-04-09 17:46:07,329] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AMNfjG3fZbYlD5mHSCa-YT4XAJ1JJVu3couegRYO1LEYVJW-fo-AdvxGjybZtLq23H-Alhlva-faeoe-zg9l-z868apKF91QOag0p5J_8Pz8dQ&upload_protocol=resumable "HTTP/1.1 200 OK"
+[2026-04-09 17:46:07,330] INFO - modules.gemini_extractor -  PDF enviado para Gemini
+[2026-04-09 17:46:07,330] INFO - google_genai.models - AFC is enabled with max remote calls: 10.
+[2026-04-09 17:46:10,202] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+[2026-04-09 17:46:10,203] INFO - modules.gemini_extractor -  Dados extraídos com sucesso
+[2026-04-09 17:46:10,203] INFO - __main__ -  Dados extraídos: João Pedro Scottini
+[2026-04-09 17:46:11,983] INFO - modules.deduplication -  Duplicata encontrada por hash: 21ef3d44244e67267813f75c95b6d778476bc3a2c3832082ad5cfb12b36137e8
+[2026-04-09 17:46:11,984] INFO - modules.deduplication -  Mudana detectada em Telefone
+[2026-04-09 17:46:11,996] INFO - modules.deduplication -  Candidato atualizado: João Pedro Scottini
+[2026-04-09 17:46:35,443] INFO - __main__ -  Candidato atualizado: João Pedro Scottini
+[2026-04-09 17:46:35,445] INFO - __main__ - 
+Processando: Nathalia Vieira_cv.pdf
+[2026-04-09 17:46:35,466] INFO - __main__ -  Extraindo dados com Gemini...
+[2026-04-09 17:46:37,331] INFO - modules.gemini_extractor -  Processando PDF (tentativa 1/4): c:\RPA\RPA_Banco_Talentos\utils\Temp\email\Nathalia Vieira_cv.pdf
+[2026-04-09 17:46:38,047] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+[2026-04-09 17:46:38,970] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AMNfjG1MmVntmHuT_JqBCMR6YXe2CBMASsKPVkZSZqFaUzAvMx-buyopO_5BdEFc35F3v47WsRCkSZjevW5Ej_q51iGz3gDer5YSsxHIuRfymw&upload_protocol=resumable "HTTP/1.1 200 OK"
+[2026-04-09 17:46:38,972] INFO - modules.gemini_extractor -  PDF enviado para Gemini
+[2026-04-09 17:46:38,973] INFO - google_genai.models - AFC is enabled with max remote calls: 10.
+[2026-04-09 17:46:43,014] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+[2026-04-09 17:46:43,016] INFO - modules.gemini_extractor -  Dados extraídos com sucesso
+[2026-04-09 17:46:43,016] INFO - __main__ -  Dados extraídos: Nathalia Vieira
+[2026-04-09 17:47:17,283] INFO - modules.deduplication -  Duplicata encontrada por hash: 8800cfd8a2af25da1b2b1e23f3eacce2f8629e80efe652cac09657e50d31e8bc
+[2026-04-09 17:47:21,941] INFO - modules.deduplication -  Mudana detectada em Telefone
+[2026-04-09 17:48:25,492] INFO - modules.deduplication -  Candidato atualizado: Nathalia Vieira
+[2026-04-09 17:48:26,676] INFO - __main__ -  Candidato atualizado: Nathalia Vieira
+[2026-04-09 17:48:26,676] INFO - __main__ - 
+ ETAPA 3: GERANDO RELATÓRIO
+[2026-04-09 17:48:26,677] INFO - __main__ - --------------------------------------------------------------------------------
+[2026-04-09 17:48:26,678] INFO - __main__ - 
+================================================================================
+[2026-04-09 17:48:26,678] INFO - __main__ -  RESUMO DA EXECUÇÃO
+[2026-04-09 17:48:26,678] INFO - __main__ - ================================================================================
+[2026-04-09 17:48:26,679] INFO - __main__ -  E-mails processados: 4
+[2026-04-09 17:48:26,679] INFO - __main__ -  Mensagens WhatsApp processadas: 0
+[2026-04-09 17:48:26,679] INFO - __main__ -  Total de arquivos baixados: 4
+[2026-04-09 17:48:26,680] INFO - __main__ -  Arquivos processados: 4
+[2026-04-09 17:48:26,680] INFO - __main__ -  Novos candidatos: 0
+[2026-04-09 17:48:26,680] INFO - __main__ -  Candidatos atualizados: 4
+[2026-04-09 17:48:26,680] INFO - __main__ - Sem mudanças: 0
+[2026-04-09 17:48:26,681] INFO - __main__ -  Erros: 0
+[2026-04-09 17:48:26,722] INFO - modules.mongodb_handler -  Estatsticas: {'total_candidatos': 4, 'origem_email': 4, 'origem_whatsapp': 0, 'com_email': 4, 'com_telefone': 4}
+[2026-04-09 17:48:26,722] INFO - __main__ - 
+ Estatísticas do MongoDB:
+[2026-04-09 17:48:26,723] INFO - __main__ -   Total de candidatos: 4
+[2026-04-09 17:48:26,723] INFO - __main__ -   Origem E-mail: 4
+[2026-04-09 17:48:26,723] INFO - __main__ -   Origem WhatsApp: 0
+[2026-04-09 17:48:26,724] INFO - __main__ -   Com E-mail: 4
+[2026-04-09 17:48:26,724] INFO - __main__ -   Com Telefone: 4
+[2026-04-09 17:48:26,724] INFO - __main__ - ================================================================================
+[2026-04-09 17:48:26,725] INFO - __main__ - 
+Limpando arquivos temporários...
+[2026-04-09 17:48:26,729] INFO - utils.file_handler -  Arquivos temporários limpos
+[2026-04-09 17:48:26,729] INFO - __main__ - 
+================================================================================
+[2026-04-09 17:48:26,729] INFO - __main__ -  PROCESSO CONCLUÍDO COM SUCESSO
+[2026-04-09 17:48:26,729] INFO - __main__ - ================================================================================
+[2026-04-09 17:49:17,367] INFO - utils.logger - ================================================================================
+[2026-04-09 17:49:17,368] INFO - utils.logger - INICIANDO BANCO DE TALENTOS
+[2026-04-09 17:49:17,368] INFO - utils.logger - ================================================================================
+[2026-04-09 17:49:21,106] INFO - __main__ - ================================================================================
+[2026-04-09 17:49:21,107] INFO - __main__ -  INICIANDO BANCO DE TALENTOS
+[2026-04-09 17:49:21,107] INFO - __main__ - ================================================================================
+[2026-04-09 17:49:21,107] INFO - __main__ - 
+ETAPA 1: CAPTURANDO ARQUIVOS
+[2026-04-09 17:49:21,108] INFO - __main__ - --------------------------------------------------------------------------------
+[2026-04-09 17:49:21,108] INFO - __main__ - 
+Processando e-mails...
+[2026-04-09 17:49:21,549] INFO - config.microsoft_graph -  Microsoft Graph configurado com sucesso
+[2026-04-09 17:49:21,550] INFO - modules.email_reader -  Iniciando leitura de e-mails...
+[2026-04-09 17:49:21,772] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-09 17:49:22,136] INFO - modules.email_reader -  4 e-mails encontrados
+[2026-04-09 17:49:22,136] INFO - modules.email_reader -  Processando e-mail: cv teste
+[2026-04-09 17:49:22,137] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-09 17:49:22,501] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-09 17:49:22,871] INFO - utils.file_handler -  Arquivo salvo: c:\RPA\RPA_Banco_Talentos\utils\Temp\email\CV_Antônio Miguel_Dev_Pleno.pdf
+[2026-04-09 17:49:22,872] INFO - modules.email_reader -  Anexo baixado: CV_Antônio Miguel_Dev_Pleno.pdf
+[2026-04-09 17:49:22,872] INFO - modules.email_reader -  Processando e-mail: Teste CV
+[2026-04-09 17:49:22,872] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-09 17:49:23,331] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-09 17:49:23,752] INFO - utils.file_handler -  Arquivo salvo: c:\RPA\RPA_Banco_Talentos\utils\Temp\email\CV_William Blech Sister_Dev_Senior.pdf
+[2026-04-09 17:49:23,752] INFO - modules.email_reader -  Anexo baixado: CV_William Blech Sister_Dev_Senior.pdf
+[2026-04-09 17:49:23,752] INFO - modules.email_reader -  Processando e-mail: Curriculo Teste
+[2026-04-09 17:49:23,753] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-09 17:49:24,127] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-09 17:49:24,497] INFO - utils.file_handler -  Arquivo salvo: c:\RPA\RPA_Banco_Talentos\utils\Temp\email\CurriculoJoaoPedroScottiniProfissional.pdf
+[2026-04-09 17:49:24,498] INFO - modules.email_reader -  Anexo baixado: CurriculoJoaoPedroScottiniProfissional.pdf
+[2026-04-09 17:49:24,498] INFO - modules.email_reader -  Processando e-mail: Teste E-mail
+[2026-04-09 17:49:24,499] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-09 17:49:24,898] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-09 17:49:25,263] INFO - utils.file_handler -  Arquivo salvo: c:\RPA\RPA_Banco_Talentos\utils\Temp\email\Nathalia Vieira_cv.pdf
+[2026-04-09 17:49:25,264] INFO - modules.email_reader -  Anexo baixado: Nathalia Vieira_cv.pdf
+[2026-04-09 17:49:25,264] INFO - modules.email_reader -  Total de arquivos baixados do e-mail: 4
+[2026-04-09 17:49:28,340] INFO - __main__ - 
+Total de arquivos capturados: 4
+[2026-04-09 17:49:28,341] INFO - __main__ - 
+ETAPA 2: PROCESSANDO ARQUIVOS
+[2026-04-09 17:49:28,341] INFO - __main__ - --------------------------------------------------------------------------------
+[2026-04-09 17:49:28,341] INFO - __main__ - 
+Processando: CV_Antônio Miguel_Dev_Pleno.pdf
+[2026-04-09 17:49:28,374] INFO - __main__ -  Extraindo dados com Gemini...
+[2026-04-09 17:49:32,095] INFO - config.gemini -  Gemini API configurada com sucesso
+[2026-04-09 17:49:32,096] INFO - modules.gemini_extractor -  Processando PDF (tentativa 1/4): c:\RPA\RPA_Banco_Talentos\utils\Temp\email\CV_Antônio Miguel_Dev_Pleno.pdf
+[2026-04-09 17:49:32,807] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+[2026-04-09 17:49:33,756] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AMNfjG1yZw90j_uchMqfRWz1oR-oGvCVDMr384mA9TK1YjLedovcB4hoR4DZN8CHJoBf48Y0LdXpGZ2L-KdVCYn_NtSZt8L19Jvs5i5CBrS0FmI&upload_protocol=resumable "HTTP/1.1 200 OK"
+[2026-04-09 17:49:33,758] INFO - modules.gemini_extractor -  PDF enviado para Gemini
+[2026-04-09 17:49:33,758] INFO - google_genai.models - AFC is enabled with max remote calls: 10.
+[2026-04-09 17:49:37,239] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+[2026-04-09 17:49:37,242] INFO - modules.gemini_extractor -  Dados extraídos com sucesso
+[2026-04-09 17:49:37,243] INFO - __main__ -  Dados extraídos: Antônio Miguel Costa Junior
+[2026-04-09 17:49:37,613] INFO - config.mongodb -  Conectado ao MongoDB: Banco_de_Talentos
+[2026-04-09 17:49:37,712] INFO - config.mongodb -  ndices criados/verificados no MongoDB
+[2026-04-09 17:49:44,746] INFO - modules.deduplication -  Novo candidato inserido: Antônio Miguel Costa Junior (ID: 69d810e8ea6b2af3cebdfb48)
+[2026-04-09 17:49:44,747] INFO - __main__ -  Novo candidato: Antônio Miguel Costa Junior
+[2026-04-09 17:49:44,747] INFO - __main__ - 
+Processando: CV_William Blech Sister_Dev_Senior.pdf
+[2026-04-09 17:49:44,759] INFO - __main__ -  Extraindo dados com Gemini...
+[2026-04-09 17:49:44,759] INFO - modules.gemini_extractor -  Processando PDF (tentativa 1/4): c:\RPA\RPA_Banco_Talentos\utils\Temp\email\CV_William Blech Sister_Dev_Senior.pdf
+[2026-04-09 17:49:45,557] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+[2026-04-09 17:49:46,808] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AMNfjG39Mv2bFLIdfz1PMWI4k7cf8Szjw-2YdxWPUzxy--NR5m8MVs_Iiqjr_HoDg1UoC-ZEnO-TxyJdmmEOVEcjlANjhZj_PeE0LprCSmC3Ew&upload_protocol=resumable "HTTP/1.1 200 OK"
+[2026-04-09 17:49:46,811] INFO - modules.gemini_extractor -  PDF enviado para Gemini
+[2026-04-09 17:49:46,812] INFO - google_genai.models - AFC is enabled with max remote calls: 10.
+[2026-04-09 17:49:51,228] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+[2026-04-09 17:49:51,232] INFO - modules.gemini_extractor -  Dados extraídos com sucesso
+[2026-04-09 17:49:51,233] INFO - __main__ -  Dados extraídos: William Blech Sister
+[2026-04-09 17:49:51,273] INFO - modules.deduplication -  Novo candidato inserido: William Blech Sister (ID: 69d810efea6b2af3cebdfb49)
+[2026-04-09 17:49:51,273] INFO - __main__ -  Novo candidato: William Blech Sister
+[2026-04-09 17:49:51,274] INFO - __main__ - 
+Processando: CurriculoJoaoPedroScottiniProfissional.pdf
+[2026-04-09 17:49:51,276] INFO - __main__ -  Extraindo dados com Gemini...
+[2026-04-09 17:49:51,276] INFO - modules.gemini_extractor -  Processando PDF (tentativa 1/4): c:\RPA\RPA_Banco_Talentos\utils\Temp\email\CurriculoJoaoPedroScottiniProfissional.pdf
+[2026-04-09 17:49:51,818] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+[2026-04-09 17:49:52,687] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AMNfjG2ngtlBIllq92e6JfoW-yyI-Myg_KgncrJr1dxWP_tNhXSVBDj2aWcrx4vwQw21x-nrB4LtcC71aaDfbe3nxmv00oiuWaAptSpawLwbV8s&upload_protocol=resumable "HTTP/1.1 200 OK"
+[2026-04-09 17:49:52,688] INFO - modules.gemini_extractor -  PDF enviado para Gemini
+[2026-04-09 17:49:52,688] INFO - google_genai.models - AFC is enabled with max remote calls: 10.
+[2026-04-09 17:49:56,457] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+[2026-04-09 17:49:56,459] INFO - modules.gemini_extractor -  Dados extraídos com sucesso
+[2026-04-09 17:49:56,459] INFO - __main__ -  Dados extraídos: João Pedro Scottini
+[2026-04-09 17:49:56,505] INFO - modules.deduplication -  Novo candidato inserido: João Pedro Scottini (ID: 69d810f4ea6b2af3cebdfb4a)
+[2026-04-09 17:49:56,505] INFO - __main__ -  Novo candidato: João Pedro Scottini
+[2026-04-09 17:49:56,505] INFO - __main__ - 
+Processando: Nathalia Vieira_cv.pdf
+[2026-04-09 17:49:56,516] INFO - __main__ -  Extraindo dados com Gemini...
+[2026-04-09 17:49:56,516] INFO - modules.gemini_extractor -  Processando PDF (tentativa 1/4): c:\RPA\RPA_Banco_Talentos\utils\Temp\email\Nathalia Vieira_cv.pdf
+[2026-04-09 17:49:57,018] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+[2026-04-09 17:49:58,018] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AMNfjG2ZrPtbYl3QTXzc3YDSCKPBYBCRHg-w21dNv5NDNdlPI4tOnQDgmAYfq1-Sokl4g1KoEVPDOCAShQbzuT5B_xccVEPWoWcycLKoM-xMZA&upload_protocol=resumable "HTTP/1.1 200 OK"
+[2026-04-09 17:49:58,019] INFO - modules.gemini_extractor -  PDF enviado para Gemini
+[2026-04-09 17:49:58,019] INFO - google_genai.models - AFC is enabled with max remote calls: 10.
+[2026-04-09 17:50:01,814] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+[2026-04-09 17:50:01,816] INFO - modules.gemini_extractor -  Dados extraídos com sucesso
+[2026-04-09 17:50:01,816] INFO - __main__ -  Dados extraídos: Nathalia Vieira
+[2026-04-09 17:50:01,865] INFO - modules.deduplication -  Novo candidato inserido: Nathalia Vieira (ID: 69d810f9ea6b2af3cebdfb4b)
+[2026-04-09 17:50:01,865] INFO - __main__ -  Novo candidato: Nathalia Vieira
+[2026-04-09 17:50:01,866] INFO - __main__ - 
+ ETAPA 3: GERANDO RELATÓRIO
+[2026-04-09 17:50:01,866] INFO - __main__ - --------------------------------------------------------------------------------
+[2026-04-09 17:50:01,866] INFO - __main__ - 
+================================================================================
+[2026-04-09 17:50:01,867] INFO - __main__ -  RESUMO DA EXECUÇÃO
+[2026-04-09 17:50:01,867] INFO - __main__ - ================================================================================
+[2026-04-09 17:50:01,867] INFO - __main__ -  E-mails processados: 4
+[2026-04-09 17:50:01,867] INFO - __main__ -  Mensagens WhatsApp processadas: 0
+[2026-04-09 17:50:01,868] INFO - __main__ -  Total de arquivos baixados: 4
+[2026-04-09 17:50:01,868] INFO - __main__ -  Arquivos processados: 4
+[2026-04-09 17:50:01,868] INFO - __main__ -  Novos candidatos: 4
+[2026-04-09 17:50:01,868] INFO - __main__ -  Candidatos atualizados: 0
+[2026-04-09 17:50:01,869] INFO - __main__ - Sem mudanças: 0
+[2026-04-09 17:50:01,869] INFO - __main__ -  Erros: 0
+[2026-04-09 17:50:01,913] INFO - modules.mongodb_handler -  Estatsticas: {'total_candidatos': 4, 'origem_email': 4, 'origem_whatsapp': 0, 'com_email': 4, 'com_telefone': 4}
+[2026-04-09 17:50:01,913] INFO - __main__ - 
+ Estatísticas do MongoDB:
+[2026-04-09 17:50:01,914] INFO - __main__ -   Total de candidatos: 4
+[2026-04-09 17:50:01,914] INFO - __main__ -   Origem E-mail: 4
+[2026-04-09 17:50:01,914] INFO - __main__ -   Origem WhatsApp: 0
+[2026-04-09 17:50:01,914] INFO - __main__ -   Com E-mail: 4
+[2026-04-09 17:50:01,915] INFO - __main__ -   Com Telefone: 4
+[2026-04-09 17:50:01,915] INFO - __main__ - ================================================================================
+[2026-04-09 17:50:01,915] INFO - __main__ - 
+Limpando arquivos temporários...
+[2026-04-09 17:50:01,918] INFO - utils.file_handler -  Arquivos temporários limpos
+[2026-04-09 17:50:01,919] INFO - __main__ - 
+================================================================================
+[2026-04-09 17:50:01,919] INFO - __main__ -  PROCESSO CONCLUÍDO COM SUCESSO
+[2026-04-09 17:50:01,919] INFO - __main__ - ================================================================================
