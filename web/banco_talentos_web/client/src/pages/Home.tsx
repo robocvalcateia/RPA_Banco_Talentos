@@ -290,18 +290,11 @@ export default function Home() {
                   <div className="mt-4">
                     <p className="text-xs font-medium text-slate-700 mb-2">Skills</p>
                     <div className="mt-2 text-sm text-slate-600 leading-relaxed">
-                      {candidate.skills
-                        ?.split(/,|\n|\|/)
-                        .slice(0, 5)
-                        .map((skill, idx) => (
-                          <span
-                            key={idx}
-                            className="text-sm text-[#08B79B] leading-relaxed mr-2"
-                          >
-                            {skill.trim()}
-                            {idx < 4 ? " •" : ""}
-                          </span>
-                        ))}
+                      {candidate.skills && (
+                        <p className="text-sm text-slate-600 leading-relaxed">
+                          {candidate.skills}
+                        </p>
+                      )}
 
                       {candidate.skills?.split(/,|\n|\|/).length > 5 && (
                         <span className="text-xs text-slate-500">
