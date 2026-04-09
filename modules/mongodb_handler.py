@@ -59,7 +59,7 @@ class MongoDBHandler:
             
             # Campos permitidos para atualização
             allowed_fields = {
-                'nome', 'email', 'telefone', 'endereco', 'skills',
+                'nome', 'email', 'nacionalidade','estado_civil','idade', 'telefone', 'endereco', 'skills',
                 'formacao_academica', 'cursos_certificacoes', 'nivel_ingles',
                 'nivel_espanhol', 'experiencia_profissional', 'linkedin'
             }
@@ -298,6 +298,9 @@ class MongoDBHandler:
                     'ID': str(candidate.get('_id')),
                     'Nome': candidate.get('nome', ''),
                     'Email': candidate.get('email', ''),
+                    'Nacionalidade': candidate.get('nacionalidade', ''),
+                    'Estado Civil': candidate.get('estado_civil', ''),
+                    'Idade': candidate.get('idade', ''),
                     'Telefone': candidate.get('telefone', ''),
                     'Endereo': candidate.get('endereco', ''),
                     'Data Nascimento': candidate.get('data_nascimento', ''),
@@ -309,7 +312,7 @@ class MongoDBHandler:
                     'Espanhol': candidate.get('nivel_espanhol', ''),
                     'Experincia': candidate.get('experiencia_profissional', ''),
                     'Fonte': candidate.get('fonte', ''),
-                    'Data Criao': candidate.get('data_criacao', ''),
+                    'Data Cricao': candidate.get('data_criacao', ''),
                     'Data Atualizao': candidate.get('data_atualizacao', '')
                 })
             
