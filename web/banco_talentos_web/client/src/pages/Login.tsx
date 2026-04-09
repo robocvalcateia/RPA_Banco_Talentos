@@ -91,7 +91,7 @@ export default function Login() {
           <img
             src="/logo_alcateia.png"
             alt="JCBuso Tecnologia"
-            className="mx-auto mb-6 w-72 object-contain"
+            className="mx-auto mb-6 w-100 object-contain"
           />
 
           <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600 rounded-lg mb-4">
