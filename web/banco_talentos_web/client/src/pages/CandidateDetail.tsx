@@ -122,40 +122,46 @@ useEffect(() => {
     }
   };
 
-  const handleSave = async () => {
+const handleSave = async () => {
+  if (!formData) return;
 
-    if (!formData) return;
+  try {
+    setIsSaving(true);
 
-    try {
-      setIsSaving(true);
-      const token = localStorage.getItem("token");
-      const API_URL = import.meta.env.VITE_API_URL;
-      const response = await fetch(`${API_URL}/api/candidatos/${params?.id}`, {
+    const token = localStorage.getItem("token");
+    const API_URL = import.meta.env.VITE_API_URL;
+
+    console.log("Payload enviado:", formData);
+
+    const response = await fetch(
+      `${API_URL}/api/candidatos/${params?.id}`,
+      {
         method: "PUT",
         headers: {
-          "Authorization": `Bearer ${token}`,
-          "Content-Type": "application/json"
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData)
-      });
-
-      const data = await response.json();
-
-      if (data.success) {
-        setCandidate(formData);
-        setIsEditing(false);
-        // Mostrar mensagem de sucesso
-        alert("Candidato atualizado com sucesso!");
-      } else {
-        setError(data.error || "Erro ao atualizar candidato");
+        body: JSON.stringify(formData),
       }
-    } catch (err) {
-      console.error("Erro ao salvar:", err);
-      setError("Erro ao salvar candidato");
-    } finally {
-      setIsSaving(false);
+    );
+
+    const data = await response.json();
+
+    console.log("Resposta API:", data);
+
+    if (data.success) {
+      setCandidate(formData);
+      setIsEditing(false);
+      alert("Candidato atualizado com sucesso!");
+    } else {
+      alert(data.error || "Erro ao atualizar");
     }
-  };
+  } catch (err) {
+    console.error(err);
+  } finally {
+    setIsSaving(false);
+  }
+};
 
       // Gerar documento
       const handleGenerateDocument = async (templateId: string) => {
