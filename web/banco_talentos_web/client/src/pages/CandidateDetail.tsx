@@ -321,44 +321,49 @@ useEffect(() => {
                 {candidate.fonte === "email" ? "📧 E-mail" : "💬 WhatsApp"}
               </Badge>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Nacionalidade */}
-              <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">
-                  Nacionalidade
-                </label>
-                {isEditing ? (
-                  <Input
-                    value={formData?.nacionalidade || ""}
-                    onChange={(e) =>
-                      handleInputChange("nacionalidade", e.target.value)
-                    }
-                  />
-                ) : (
-                  <p className="text-slate-600">
-                    {candidate.nacionalidade || "-"}
-                  </p>
-                )}
-              </div>
+          </div>
 
-              {/* Idade */}
-              <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">
-                  Idade
-                </label>
-                {isEditing ? (
-                  <Input
-                    value={formData?.idade || ""}
-                    onChange={(e) =>
-                      handleInputChange("idade", e.target.value)
-                    }
-                  />
-                ) : (
-                  <p className="text-slate-600">
-                    {candidate.idade || "-"}
-                  </p>
-                )}
-              </div>
+          {/* Grid de Campos */}
+          {/* Nacionalidade */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Nacionalidade */}
+            <div>
+              <label className="block text-sm font-medium text-slate-700 mb-2">
+                Nacionalidade
+              </label>
+              {isEditing ? (
+                <Input
+                  value={formData?.nacionalidade || ""}
+                  onChange={(e) =>
+                    handleInputChange("nacionalidade", e.target.value)
+                  }
+                />
+              ) : (
+                <p className="text-slate-600">
+                  {candidate.nacionalidade || "-"}
+                </p>
+              )}
+            </div>
+
+            {/* Idade */}
+            <div>
+              <label className="block text-sm font-medium text-slate-700 mb-2">
+                Idade
+              </label>
+              {isEditing ? (
+                <Input
+                  value={formData?.idade || ""}
+                  onChange={(e) =>
+                    handleInputChange("idade", e.target.value)
+                  }
+                />
+              ) : (
+                <p className="text-slate-600">
+                  {candidate.idade || "-"}
+                </p>
+              )}
+            </div>
+
             {/* E-mail */}
             <div>
               <label className="block text-sm font-medium text-slate-700 mb-2">E-mail</label>
