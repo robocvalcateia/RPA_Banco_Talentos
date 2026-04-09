@@ -53,7 +53,7 @@ Nome:
 Nacionalidade:
 - Nacionalidade do Canditado, caso não tenha nada considerar Brasileiro
 
-Estado Civil:
+Estado_Civil:
 - Estado Civil do Canditado, caso não tenha nada considerar vazio
 
 Idade:
