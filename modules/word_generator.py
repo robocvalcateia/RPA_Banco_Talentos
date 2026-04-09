@@ -81,21 +81,25 @@ class WordGenerator:
                             self._replace_text_in_paragraph(paragraph, placeholder, replacement)
     
     def _replace_text_in_paragraph(self, paragraph, placeholder, replacement):
-        """Substitui placeholder em um parágrafo mesmo quando dividido em runs"""
         full_text = paragraph.text
 
-        if placeholder in full_text:
-            new_text = full_text.replace(placeholder, replacement)
+        if placeholder not in full_text:
+            return
 
-            # limpa runs existentes
-            for run in paragraph.runs:
-                run.text = ""
+        # se valor vazio remove a linha inteira
+        if replacement is None or str(replacement).strip() == "":
+            paragraph.text = ""
+            return
 
-            # escreve tudo no primeiro run
-            if paragraph.runs:
-                paragraph.runs[0].text = new_text
-            else:
-                paragraph.add_run(new_text)
+        new_text = full_text.replace(placeholder, str(replacement))
+
+        for run in paragraph.runs:
+            run.text = ""
+
+        if paragraph.runs:
+            paragraph.runs[0].text = new_text
+        else:
+            paragraph.add_run(new_text)
     
     def list_templates(self):
         """Retorna lista de templates disponíveis"""
