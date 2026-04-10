@@ -266,7 +266,7 @@ const handleSave = async () => {
           {!isEditing ? (
             <Button
               onClick={() => setIsEditing(true)}
-              variant="default"
+              variant="outline"
               size="sm"
               className="border-[#08B79B] text-[#08B79B] hover:bg-[#08B79B] hover:text-white shadow-sm"
             >
@@ -278,7 +278,7 @@ const handleSave = async () => {
               <Button
                 onClick={handleSave}
                 disabled={isSaving}
-                variant="default"
+                variant="outline"
                 size="sm"
                 className="border-[#08B79B] text-[#08B79B] hover:bg-[#08B79B] hover:text-white shadow-sm"
               >
