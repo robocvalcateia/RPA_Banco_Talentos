@@ -185,7 +185,7 @@ export default function Home() {
                 onClick={handleLogout}
                 variant="outline"
                 size="sm"
-                className="gap-2 border-slate-200 text-slate-900 hover:bg-slate-50 hover:text-slate-900 hover:border-slate-300 shadow-sm"
+                className="border-[#08B79B] text-[#08B79B] hover:bg-[#08B79B] hover:text-white shadow-sm"
               >
                 <LogOut className="w-4 h-4" />
                 Sair
