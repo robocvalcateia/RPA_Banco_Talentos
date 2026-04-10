@@ -34,6 +34,8 @@ export default function CandidateDetail() {
   const [, setLocation] = useLocation();
   const { user } = useAuth();
   
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+  const [isDeleting, setIsDeleting] = useState(false);
   const [candidate, setCandidate] = useState<Candidate | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -235,6 +237,41 @@ const handleSave = async () => {
     );
   }
 
+  const handleDelete = async () => {
+    try {
+      setIsDeleting(true);
+
+      const token = localStorage.getItem("token");
+      const API_URL = import.meta.env.VITE_API_URL;
+
+      const response = await fetch(
+        `${API_URL}/api/candidatos/${params?.id}`,
+        {
+          method: "DELETE",
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      const data = await response.json();
+
+      if (data.success) {
+        alert("Candidato deletado com sucesso!");
+        setLocation("/");
+      } else {
+        alert(data.error || "Erro ao deletar candidato");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Erro ao conectar com o servidor");
+    } finally {
+      setIsDeleting(false);
+      setShowDeleteConfirm(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       {/* Header */}
@@ -263,47 +300,75 @@ const handleSave = async () => {
               </Button>
             ))}
           </div>
-          {!isEditing ? (
+          <div className="flex gap-2">
+            {!isEditing ? (
+              <Button
+                onClick={() => setIsEditing(true)}
+                variant="outline"
+                size="sm"
+                className="border-[#08B79B] text-[#08B79B] hover:bg-[#08B79B] hover:text-white shadow-sm"
+              >
+                <Edit2 className="w-4 h-4" />
+                Editar
+              </Button>
+            ) : (
+              <>
+                <Button
+                  onClick={handleSave}
+                  disabled={isSaving}
+                  variant="outline"
+                  size="sm"
+                  className="border-[#08B79B] text-[#08B79B] hover:bg-[#08B79B] hover:text-white shadow-sm"
+                >
+                  {isSaving ? "Salvando..." : "Salvar"}
+                </Button>
+
+                <Button
+                  onClick={handleCancel}
+                  disabled={isSaving}
+                  variant="outline"
+                  size="sm"
+                  className="border-[#08B79B] text-[#08B79B] hover:bg-[#08B79B] hover:text-white shadow-sm"
+                >
+                  Cancelar
+                </Button>
+              </>
+            )}
+
             <Button
-              onClick={() => setIsEditing(true)}
+              onClick={() => setShowDeleteConfirm(true)}
               variant="outline"
               size="sm"
-              className="border-[#08B79B] text-[#08B79B] hover:bg-[#08B79B] hover:text-white shadow-sm"
+              className="border-red-500 text-red-500 hover:bg-red-500 hover:text-white shadow-sm"
             >
-              <Edit2 className="w-4 h-4" />
-              Editar
+              Deletar
             </Button>
-          ) : (
-            <div className="flex gap-2">
-              <Button
-                onClick={handleSave}
-                disabled={isSaving}
-                variant="outline"
-                size="sm"
-                className="border-[#08B79B] text-[#08B79B] hover:bg-[#08B79B] hover:text-white shadow-sm"
-              >
-                {isSaving ? (
-                  <>
-                    <Loader2 className="w-4 h-4 animate-spin" />
-                    Salvando...
-                  </>
-                ) : (
-                  <>
-                    <Save className="w-4 h-4" />
-                    Salvar
-                  </>
-                )}
-              </Button>
-              <Button
-                onClick={handleCancel}
-                disabled={isSaving}
-                variant="outline"
-                size="sm"
-                className="border-[#08B79B] text-[#08B79B] hover:bg-[#08B79B] hover:text-white shadow-sm"
-              >
-                <X className="w-4 h-4" />
-                Cancelar
-              </Button>
+          </div>
+          {showDeleteConfirm && (
+            <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
+              <Card className="p-6 w-full max-w-md">
+                <h2 className="text-lg font-bold text-slate-900 mb-4">
+                  Tem certeza que deseja deletar?
+                </h2>
+
+                <div className="flex justify-end gap-2">
+                  <Button
+                    variant="outline"
+                    className="border-[#08B79B] text-[#08B79B] hover:bg-[#08B79B] hover:text-white"
+                    onClick={() => setShowDeleteConfirm(false)}
+                  >
+                    Não
+                  </Button>
+
+                  <Button
+                    onClick={handleDelete}
+                    disabled={isDeleting}
+                    className="bg-red-500 text-white hover:bg-red-600"
+                  >
+                    {isDeleting ? (<><Loader2 className="w-4 h-4 animate-spin" />Deletando...</>) : ("Sim")}
+                  </Button>
+                </div>
+              </Card>
             </div>
           )}
         </div>
