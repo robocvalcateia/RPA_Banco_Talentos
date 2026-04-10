@@ -185,7 +185,7 @@ export default function Home() {
                 onClick={handleLogout}
                 variant="outline"
                 size="sm"
-                className="border-blue-200 text-slate-900 hover:bg-[#08B79B] hover:text-white shadow-sm"
+                className="border-[#08B79B] text-[#08B79B] hover:bg-[#08B79B] hover:text-white shadow-sm"
               >
                 <LogOut className="w-4 h-4" />
                 Sair
@@ -228,7 +228,7 @@ export default function Home() {
               onClick={() =>setFilterType(filterType === "nome"? "skill": filterType === "skill"? "endereco": "nome")}
               variant="outline"
               size="sm"
-              className="min-w-max border-blue-200 text-slate-900 hover:bg-[#08B79B] hover:text-white"
+              className="min-w-max border-[#08B79B] text-[#08B79B] hover:bg-[#08B79B] hover:text-white"
             >
               {filterType === "nome"? "Buscar por Skill": filterType === "skill"? "Buscar por Endereço": "Buscar por Nome"}
             </Button>
@@ -253,7 +253,7 @@ export default function Home() {
             {filteredCandidates.map((candidate) => (
               <Card
                 key={candidate._id}
-                className="p-6 border border-[#d9f7ef] hover:border-blue-200 hover:shadow-xl transition-all duration-300 cursor-pointer rounded-2xl bg-white"
+                className="p-6 border border-[#d9f7ef] hover:border-[#08B79B] hover:shadow-xl transition-all duration-300 cursor-pointer rounded-2xl bg-white"
                 onClick={() => setLocation(`/candidato/${candidate._id}`)}
               >
                 <div className="flex items-start justify-between mb-4">
