@@ -147,8 +147,8 @@ export default function Home() {
 
   const getSourceBadgeColor = (source: string) => {
     return source === "email"
-      ? "bg-[#e8faf6] text-[#087c69]"
-      : "bg-[#dff7f1] text-[#065f52]";
+      ? "bg-blue-100 text-blue-800"
+      : "bg-blue-50 text-blue-700";
   };
 
   const getSourceLabel = (source: string) => {
