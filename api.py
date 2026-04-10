@@ -13,7 +13,8 @@ import os
 from dotenv import load_dotenv
 from modules.word_generator import WordGenerator
 from flask import send_file
-
+import subprocess
+import sys
 word_gen = WordGenerator("templates")
 
 load_dotenv()
@@ -575,6 +576,30 @@ def delete_candidato(id):
         return jsonify({
             'success': False,
             'error': str(e)
+        }), 500
+
+@app.route('/api/processar-emails', methods=['POST'])
+@token_required
+def processar_emails():
+    """
+    Executa a leitura de e-mails e processamento de CVs
+    """
+    try:
+        subprocess.Popen(
+            [sys.executable, "main.py"],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL
+        )
+
+        return jsonify({
+            "success": True,
+            "message": "Processamento iniciado com sucesso"
+        }), 200
+
+    except Exception as e:
+        return jsonify({
+            "success": False,
+            "error": str(e)
         }), 500
 
 if __name__ == '__main__':

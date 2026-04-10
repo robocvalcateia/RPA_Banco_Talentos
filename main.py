@@ -16,6 +16,7 @@ logger = LoggerSetup.setup()
 
 # Importar módulos
 from modules.email_reader import process_emails
+from modules.email_reader import EmailReader
 from modules.whatsapp_reader import process_whatsapp_messages
 from modules.gemini_extractor import extract_cv_data
 from modules.deduplication import process_candidate_data
@@ -42,6 +43,9 @@ class BancoTalentosOrchestrator:
     def run(self):
         """Executa o fluxo completo"""
         try:
+            email_reader = EmailReader()
+            Folder_Mail_Sucesso = 'CVs_Processados'
+            Folder_Mail_Erro = 'CVs_Processados_Erro'
             self.logger.info("=" * 80)
             self.logger.info(" INICIANDO BANCO DE TALENTOS")
             self.logger.info("=" * 80)
@@ -114,6 +118,7 @@ class BancoTalentosOrchestrator:
                     )
                     
                     # Atualizar estatísticas
+                    Move_Folder = Folder_Mail_Sucesso
                     if result['status'] == 'novo':
                         self.stats['novos_candidatos'] += 1
                         self.logger.info(f" Novo candidato: {result['nome']}")
@@ -126,10 +131,24 @@ class BancoTalentosOrchestrator:
                     else:
                         self.stats['erros'] += 1
                         self.logger.error(f" Erro ao processar: {result.get('mensagem')}")
-                    
+                        Move_Folder = Folder_Mail_Erro
+
+                    # Move Mail Folder
+                    if file_info.get("source") == "email" and file_info.get("email_id"):
+                        email_reader.move_email(
+                            file_info["email_id"],
+                            Move_Folder
+                        )
+
                     self.stats['arquivos_processados'] += 1
                     
                 except Exception as e:
+                    # Move Mail Folder
+                    if file_info.get("source") == "email" and file_info.get("email_id"):
+                        email_reader.move_email(
+                            file_info["email_id"],
+                            Folder_Mail_Erro)
+
                     self.logger.error(f" Erro ao processar arquivo: {e}")
                     self.stats['erros'] += 1
                     continue

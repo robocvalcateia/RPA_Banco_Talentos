@@ -134,6 +134,7 @@ class EmailReader:
                                     'path': file_path,
                                     'filename': filename,
                                     'source': 'email',
+                                    'email_id': email_id,
                                     'email_subject': subject,
                                     'email_date': received_date
                                 })
@@ -152,6 +153,43 @@ class EmailReader:
         file_ext = os.path.splitext(filename)[1].lower()
         return file_ext in valid_extensions
 
+
+    def move_email(self, email_id, destination_folder_name):
+        """Move e-mail para uma pasta específica"""
+        try:
+            headers = self.graph_config.get_headers()
+
+            # buscar pasta destino
+            folders_url = f"{self.base_url}/users/{self.email}/mailFolders"
+            response = requests.get(folders_url, headers=headers)
+            response.raise_for_status()
+
+            folders = response.json().get("value", [])
+
+            destination_folder = next(
+                (f for f in folders if f["displayName"] == destination_folder_name),
+                None
+            )
+
+            if not destination_folder:
+                logger.error(f"Pasta não encontrada: {destination_folder_name}")
+                return False
+
+            move_url = f"{self.base_url}/users/{self.email}/messages/{email_id}/move"
+
+            payload = {
+                "destinationId": destination_folder["id"]
+            }
+
+            response = requests.post(move_url, headers=headers, json=payload)
+            response.raise_for_status()
+
+            logger.info(f"E-mail movido para {destination_folder_name}")
+            return True
+
+        except Exception as e:
+            logger.error(f"Erro ao mover e-mail: {e}")
+            return False
 
 def process_emails():
     """Funo auxiliar para processar e-mails"""

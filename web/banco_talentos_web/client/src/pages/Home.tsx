@@ -34,6 +34,7 @@ export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
   const [filterType, setFilterType] = useState<"nome" | "skill" | "endereco">("nome");
   const [loading, setLoading] = useState(true);
+  const [processingEmails, setProcessingEmails] = useState(false);
   const [selectedCandidate, setSelectedCandidate] = useState<Candidate | null>(null);
   const [error, setError] = useState("");
   const [stats, setStats] = useState({
@@ -166,6 +167,37 @@ export default function Home() {
     );
   }
 
+
+const handleProcessarEmails = async () => {
+  try {
+    setProcessingEmails(true);
+
+    const token = localStorage.getItem("token");
+    const API_URL = import.meta.env.VITE_API_URL;
+
+    const response = await fetch(`${API_URL}/api/processar-emails`, {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${token}`,
+        "Content-Type": "application/json"
+      }
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      alert("Leitura de e-mails iniciada com sucesso.");
+    } else {
+      alert(data.error || "Erro ao iniciar processamento.");
+    }
+
+  } catch (error) {
+    alert("Erro ao conectar com o servidor.");
+  } finally {
+    setProcessingEmails(false);
+  }
+};
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       {/* Header */}
@@ -196,7 +228,17 @@ export default function Home() {
               </div>
             </div>
           </div>
-
+          <div className="mt-3">
+          <Button
+            onClick={handleProcessarEmails}
+            disabled={processingEmails}
+            variant="outline"
+            size="sm"
+            className="border-[#08B79B] text-[#08B79B] hover:bg-[#08B79B] hover:text-white shadow-sm"
+          >
+            {processingEmails ? "Processando..." : "Processar Leitura de E-mails"}
+          </Button>
+          </div>
           {/* Estatísticas */}
           <div className="grid grid-cols-3 gap-4 mb-6">
             <Card className="p-4 bg-slate-50 border-slate-200">
