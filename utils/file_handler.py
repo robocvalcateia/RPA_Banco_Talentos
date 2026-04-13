@@ -10,6 +10,10 @@ from docx import Document
 from pdf2image import convert_from_path
 from PIL import Image
 import PyPDF2
+import subprocess
+from docx import Document
+from reportlab.lib.pagesizes import A4
+from reportlab.pdfgen import canvas
 
 from utils.config import *
 
@@ -61,34 +65,93 @@ class FileHandler:
     
     @staticmethod
     def convert_docx_to_pdf(docx_path):
-        """Converte arquivo DOCX para PDF"""
+        """Converte DOCX/DOC para PDF usando LibreOffice"""
+
         try:
-            # Usar LibreOffice para conversão
-            import subprocess
-            
             temp_folder = FileHandler.get_temp_folder()
-            pdf_path = os.path.join(temp_folder, Path(docx_path).stem + '.pdf')
-            
-            # Comando para converter com LibreOffice
+            os.makedirs(temp_folder, exist_ok=True)
+
+            docx_path = os.path.abspath(docx_path)
+
+            if not os.path.exists(docx_path):
+                logger.error(f"Arquivo não encontrado: {docx_path}")
+                return None
+
+            pdf_path = os.path.join(
+                temp_folder,
+                f"{Path(docx_path).stem}.pdf"
+            )
+
+            # localiza o executável
+            soffice_path = (
+                shutil.which("soffice")
+                or shutil.which("libreoffice")
+            )
+
+            # fallback windows
+            if not soffice_path and os.name == "nt":
+                possible_paths = [
+                    r"C:\Program Files\LibreOffice\program\soffice.exe",
+                    r"C:\Program Files (x86)\LibreOffice\program\soffice.exe"
+                ]
+
+                for path in possible_paths:
+                    if os.path.exists(path):
+                        soffice_path = path
+                        break
+
+            if not soffice_path:
+                logger.error("LibreOffice não encontrado.")
+                return None
+
             cmd = [
-                'libreoffice',
-                '--headless',
-                '--convert-to', 'pdf',
-                '--outdir', temp_folder,
+                soffice_path,
+                "--headless",
+                "--nologo",
+                "--nolockcheck",
+                "--nodefault",
+                "--nofirststartwizard",
+                "--convert-to", "pdf",
+                "--outdir", temp_folder,
                 docx_path
             ]
-            
-            result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
-            
-            if result.returncode == 0 and os.path.exists(pdf_path):
-                logger.info(f" DOCX convertido para PDF: {pdf_path}")
-                return pdf_path
-            else:
-                logger.warning(f"Erro ao converter DOCX: {result.stderr}")
+
+            logger.info(f"Convertendo arquivo: {docx_path}")
+
+            result = subprocess.run(
+                cmd,
+                capture_output=True,
+                text=True,
+                timeout=120
+            )
+
+            logger.info(f"STDOUT: {result.stdout}")
+            logger.info(f"STDERR: {result.stderr}")
+
+            if result.returncode != 0:
+                logger.error(
+                    f"Erro na conversão. Código: {result.returncode}"
+                )
                 return None
-                
+
+            if not os.path.exists(pdf_path):
+                logger.error("PDF não foi gerado.")
+                return None
+
+            if os.path.getsize(pdf_path) == 0:
+                logger.error("PDF gerado está vazio.")
+                return None
+
+            logger.info(f"PDF gerado com sucesso: {pdf_path}")
+
+            return pdf_path
+
+        except subprocess.TimeoutExpired:
+            logger.error("Timeout ao converter DOCX para PDF")
+            return None
+
         except Exception as e:
-            logger.error(f" Erro ao converter DOCX para PDF: {e}")
+            logger.error(f"Erro ao converter DOCX para PDF: {e}")
             return None
     
     @staticmethod

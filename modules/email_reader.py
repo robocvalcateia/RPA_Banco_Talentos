@@ -138,6 +138,8 @@ class EmailReader:
                                     'email_subject': subject,
                                     'email_date': received_date
                                 })
+                else:
+                    EmailReader.move_email(self, email_id,'CVs_Processados_Erro')
             
             logger.info(f" Total de arquivos baixados do e-mail: {len(downloaded_files)}")
             return downloaded_files
