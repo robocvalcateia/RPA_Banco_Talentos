@@ -75,7 +75,7 @@ export default function Login() {
         console.error("❌ Erro:", data.error);
       }
     } catch (err) {
-      const errorMessage = "Erro ao conectar com o servidor. Verifique se a API está rodando em http://localhost:5000";
+      const errorMessage = "Erro ao conectar com o servidor. Verifique se a API está disponível.";
       setError(errorMessage);
       console.error("❌ Erro na requisição:", err);
     } finally {

@@ -197,7 +197,7 @@ class FileHandler:
             elif file_ext == '.docx':
                 return FileHandler.convert_docx_to_pdf(file_path)
             elif file_ext == '.doc':
-                return FileHandler.convert_doc_to_pdf(file_path)
+                return FileHandler.convert_docx_to_pdf(file_path)
             else:
                 logger.warning(f"Formato não suportado: {file_ext}")
                 return None
