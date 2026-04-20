@@ -204,19 +204,20 @@ const handleProcessarEmails = async () => {
       <header className="bg-white/95 backdrop-blur-md border-b border-[#d9f7ef] sticky top-0 z-10 shadow-sm">
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-start justify-between mb-2">
-            <div>
-              <h1 className="text-3xl font-bold text-slate-900">Banco de Talentos</h1>
-              <p className="text-slate-600 mt-1">Consulte e gerencie candidatos</p>
-            </div>
-            <div className="text-right">
-                <div className="text-sm font-normal text-slate-600 ml-2">
-                  Total de Candidatos
-                </div>
-              <div className="text-2xl font-bold text-slate-900">
-                {stats.total}
+          <div>
+            <h1 className="text-3xl font-bold text-slate-900">Banco de Talentos</h1>
 
-              </div>
-            </div>
+            <p className="text-slate-600 mt-1">
+              Consulte e Gerencie Candidatos
+            </p>
+
+            <p className="text-sm text-slate-500 mt-1">
+              Total de Candidatos: 
+              <span className="font-semibold text-slate-900 ml-1">
+                {stats.total}
+              </span>
+            </p>
+          </div>
             <div className="flex items-center gap-4">
               <div className="text-right">
                 <div className="text-sm text-slate-600">Logado como</div>
