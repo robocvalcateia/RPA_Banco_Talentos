@@ -210,8 +210,8 @@ const handleProcessarEmails = async () => {
             </div>
             <div className="flex items-center gap-4">
               <div className="text-right">
-                <div className="text-sm text-slate-600">Total de Candidatos</div>
-                <div className="text-2xl font-bold text-slate-900 mt-1">{stats.total}</div>
+                <div className="text-sm font-normal text-slate-600 ml-2">Total de Candidatos</div>
+                <div className="text-2xl font-bold text-slate-900">{stats.total}</div>
               </div>
 
             </div>
