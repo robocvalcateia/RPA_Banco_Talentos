@@ -203,7 +203,7 @@ const handleProcessarEmails = async () => {
       {/* Header */}
       <header className="bg-white/95 backdrop-blur-md border-b border-[#d9f7ef] sticky top-0 z-10 shadow-sm">
         <div className="container mx-auto px-4 py-3">
-          <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center justify-between mb-2">
             <div>
               <h1 className="text-3xl font-bold text-slate-900">Banco de Talentos</h1>
               <p className="text-slate-600 mt-1">Consulte e gerencie candidatos</p>
@@ -240,7 +240,7 @@ const handleProcessarEmails = async () => {
           </Button>
           </div>
           {/* Estatísticas */}
-          <div className="flex justify-center gap-4 mb-6">
+          <div className="flex justify-center gap-4 mb-6 -mt-4">
             <Card className="w-[150px] p-4 bg-slate-50 border-slate-200">
               <div className="text-sm text-slate-600">Total</div>
               <div className="text-2xl font-bold text-slate-900 mt-1">{stats.total}</div>
