@@ -228,7 +228,7 @@ const handleProcessarEmails = async () => {
               </div>
             </div>
           </div>
-          <div className="mt-1 mb-6">
+          <div className="mt-1 mb-2">
           <Button
             onClick={handleProcessarEmails}
             disabled={processingEmails}
