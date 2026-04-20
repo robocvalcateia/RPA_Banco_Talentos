@@ -203,7 +203,7 @@ const handleProcessarEmails = async () => {
       {/* Header */}
       <header className="bg-white/95 backdrop-blur-md border-b border-[#d9f7ef] sticky top-0 z-10 shadow-sm">
         <div className="container mx-auto px-4 py-3">
-          <div className="flex items-start justify-between mb-2">
+          <div className="grid grid-cols-3 items-center mb-2">
             <div>
               <h1 className="text-3xl font-bold text-slate-900">Banco de Talentos</h1>
               <p className="text-slate-600 mt-1">Consulte e gerencie candidatos</p>
