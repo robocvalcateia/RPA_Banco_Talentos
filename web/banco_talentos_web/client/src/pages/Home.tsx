@@ -214,15 +214,6 @@ const handleProcessarEmails = async () => {
                 <div className="text-2xl font-bold text-slate-900 mt-1">{stats.total}</div>
               </Card>
 
-              <Card className="w-[150px] p-4 bg-[#e8faf6] border-[#b8eee2]">
-                <div className="text-sm text-blue-600">📧 E-mail</div>
-                <div className="text-2xl font-bold text-blue-900 mt-1">{stats.email}</div>
-              </Card>
-
-              <Card className="w-[150px] p-4 bg-[#f0fdf9] border-[#c8f5ea]">
-                <div className="text-sm text-green-600">💬 WhatsApp</div>
-                <div className="text-2xl font-bold text-green-900 mt-1">{stats.whatsapp}</div>
-              </Card>
             </div>
             <div className="flex items-center gap-4">
               <div className="text-right">
@@ -238,10 +229,6 @@ const handleProcessarEmails = async () => {
                 <LogOut className="w-4 h-4" />
                 Sair
               </Button>
-              <div className="text-right">
-                <div className="text-sm text-slate-600">Total de Candidatos</div>
-                <div className="text-2xl font-bold text-slate-900">{stats.total}</div>
-              </div>
             </div>
           </div>
           <div className="mt-1 mb-2">
