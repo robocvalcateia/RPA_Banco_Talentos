@@ -208,12 +208,13 @@ const handleProcessarEmails = async () => {
               <h1 className="text-3xl font-bold text-slate-900">Banco de Talentos</h1>
               <p className="text-slate-600 mt-1">Consulte e gerencie candidatos</p>
             </div>
-            <div className="flex items-center gap-4">
-              <div className="text-right">
-                <div className="text-sm font-normal text-slate-600 ml-2">Total de Candidatos</div>
-                <div className="text-2xl font-bold text-slate-900">{stats.total}</div>
+            <div className="text-right">
+              <div className="text-2xl font-bold text-slate-900">
+                {stats.total}
+                <span className="text-sm font-normal text-slate-600 ml-2">
+                  Candidatos
+                </span>
               </div>
-
             </div>
             <div className="flex items-center gap-4">
               <div className="text-right">
