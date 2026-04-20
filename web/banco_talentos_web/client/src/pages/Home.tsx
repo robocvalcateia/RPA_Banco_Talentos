@@ -202,7 +202,7 @@ const handleProcessarEmails = async () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       {/* Header */}
       <header className="bg-white/95 backdrop-blur-md border-b border-[#d9f7ef] sticky top-0 z-10 shadow-sm">
-        <div className="container mx-auto px-4 py-6">
+        <div className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-between mb-6">
             <div>
               <h1 className="text-3xl font-bold text-slate-900">Banco de Talentos</h1>
