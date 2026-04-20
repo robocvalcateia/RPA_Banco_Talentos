@@ -240,16 +240,18 @@ const handleProcessarEmails = async () => {
           </Button>
           </div>
           {/* Estatísticas */}
-          <div className="grid grid-cols-3 gap-4 mb-6">
-            <Card className="p-4 bg-slate-50 border-slate-200">
+          <div className="flex justify-center gap-4 mb-6">
+            <Card className="w-[260px] p-4 bg-slate-50 border-slate-200">
               <div className="text-sm text-slate-600">Total</div>
               <div className="text-2xl font-bold text-slate-900 mt-1">{stats.total}</div>
             </Card>
-            <Card className="p-4 bg-[#e8faf6] border-[#b8eee2] shadow-sm hover:shadow-md transition-all">
+
+            <Card className="w-[260px] p-4 bg-[#e8faf6] border-[#b8eee2] shadow-sm hover:shadow-md transition-all">
               <div className="text-sm text-blue-600">📧 E-mail</div>
               <div className="text-2xl font-bold text-blue-900 mt-1">{stats.email}</div>
             </Card>
-            <Card className="p-4 bg-[#f0fdf9] border-[#c8f5ea] shadow-sm hover:shadow-md transition-all">
+
+            <Card className="w-[260px] p-4 bg-[#f0fdf9] border-[#c8f5ea] shadow-sm hover:shadow-md transition-all">
               <div className="text-sm text-green-600">💬 WhatsApp</div>
               <div className="text-2xl font-bold text-green-900 mt-1">{stats.whatsapp}</div>
             </Card>

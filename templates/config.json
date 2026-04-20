@@ -2,7 +2,7 @@
   "templates": [
     {
       "id": "CV",
-      "nome": "Template_01",
+      "nome": "CV Alcateia",
       "arquivo": "template_1_cv.docx",
       "placeholders": {
         "NOME": "nome",
@@ -23,12 +23,23 @@
     },
     {
       "id": "CV",
-      "nome": "Template_02",
+      "nome": "CV DTT",
       "arquivo": "template_2_cv.docx",
       "placeholders": {
-        "NOME_CANDIDATO": "nome",
-        "SKILLS_PRINCIPAIS": "skills",
-        "EXPERIENCIA_RESUMIDA": "experiencia_profissional"
+        "NOME": "nome",
+        "EMAIL": "email",
+        "NACIONALIDADE": "nacionalidade",
+        "IDADE": "idade",
+        "TELEFONE": "telefone",
+        "ENDERECO": "endereco",
+        "SKILLS": "skills",
+        "CONHECIMENTO_TECNICO": "conhecimento_tecnico",
+        "FORMACAO_ACADEMICA": "formacao_academica",
+        "EXPERIENCIA_PROFISSIONAL": "experiencia_profissional",
+        "CURSOS": "cursos_certificacoes",
+        "LINKEDIN": "linkedin",
+        "NIVEL_INGLES": "nivel_ingles",
+        "NIVEL_ESPANHOL": "nivel_espanhol"
       }
     }
   ]
