@@ -208,7 +208,10 @@ const handleProcessarEmails = async () => {
               <h1 className="text-3xl font-bold text-slate-900">Banco de Talentos</h1>
               <p className="text-slate-600 mt-1">Consulte e gerencie candidatos</p>
             </div>
-
+              <div className="text-right">
+                <div className="text-sm text-slate-600">Total de Candidatos</div>
+                <div className="text-2xl font-bold text-slate-900">{stats.total}</div>
+              </div>
             <div className="flex items-center gap-4">
               <div className="text-right">
                 <div className="text-sm text-slate-600">Logado como</div>
@@ -223,10 +226,6 @@ const handleProcessarEmails = async () => {
                 <LogOut className="w-4 h-4" />
                 Sair
               </Button>
-              <div className="text-right">
-                <div className="text-sm text-slate-600">Total de Candidatos</div>
-                <div className="text-2xl font-bold text-slate-900">{stats.total}</div>
-              </div>
             </div>
           </div>
           <div className="mt-1 mb-2">
