@@ -118,21 +118,18 @@ export default function Home() {
       return;
     }
 
-    const term = searchTerm.toLowerCase();
+    const termos = searchTerm.toLowerCase().split(" ").filter(t => t.trim() !== "");
     const filtered = candidates.filter(candidate => {
-      if (filterType === "nome") {
-        return candidate.nome?.toLowerCase().includes(term);
-      }
+      const textoCompleto = `
+        ${candidate.nome}
+        ${candidate.skills}
+        ${candidate.endereco}
+        ${candidate.experiencia_profissional}
+        ${candidate.formacao_academica}
+        ${candidate.cursos_certificacoes}
+      `.toLowerCase();
 
-      if (filterType === "skill") {
-        return candidate.skills?.toLowerCase().includes(term);
-      }
-
-      if (filterType === "endereco") {
-        return candidate.endereco?.toLowerCase().includes(term);
-      }
-
-      return false;
+      return termos.every(t => textoCompleto.includes(t));
     });
 
     setFilteredCandidates(filtered);
@@ -252,7 +249,7 @@ const handleProcessarEmails = async () => {
             <div className="flex-1 relative">
               <Search className="absolute left-3 top-3 w-5 h-5 text-slate-400" />
               <Input
-                placeholder={`Buscar por ${filterType === "nome"? "nome": filterType === "skill"? "skill": "endereço"}...`}
+                placeholder="Buscar por múltiplas palavras"
                 value={searchTerm}
                 onChange={handleSearch}
                 className="pl-10 h-10 border-slate-300"
