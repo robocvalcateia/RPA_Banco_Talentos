@@ -1,0 +1,118 @@
+[2026-04-21 06:57:03,530] INFO - utils.logger - ================================================================================
+[2026-04-21 06:57:03,530] INFO - utils.logger - INICIANDO BANCO DE TALENTOS
+[2026-04-21 06:57:03,530] INFO - utils.logger - ================================================================================
+[2026-04-21 06:57:08,937] INFO - config.microsoft_graph -  Microsoft Graph configurado com sucesso
+[2026-04-21 06:57:08,938] INFO - __main__ - ================================================================================
+[2026-04-21 06:57:08,938] INFO - __main__ -  INICIANDO BANCO DE TALENTOS
+[2026-04-21 06:57:08,939] INFO - __main__ - ================================================================================
+[2026-04-21 06:57:08,940] INFO - __main__ - 
+ETAPA 1: CAPTURANDO ARQUIVOS
+[2026-04-21 06:57:08,940] INFO - __main__ - --------------------------------------------------------------------------------
+[2026-04-21 06:57:08,940] INFO - __main__ - 
+Processando e-mails...
+[2026-04-21 06:57:08,940] INFO - modules.email_reader -  Iniciando leitura de e-mails...
+[2026-04-21 06:57:09,156] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-21 06:57:09,470] INFO - modules.email_reader -  4 e-mails encontrados
+[2026-04-21 06:57:09,471] INFO - modules.email_reader -  Processando e-mail: Fw: Oportunidade TaxOne
+[2026-04-21 06:57:09,471] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-21 06:57:09,883] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-21 06:57:10,196] INFO - utils.file_handler -  Arquivo salvo: c:\RPA\RPA_Banco_Talentos\utils\Temp\email\Currículo_MariaFernanda.docx
+[2026-04-21 06:57:10,196] INFO - modules.email_reader -  Anexo baixado: Currículo_MariaFernanda.docx
+[2026-04-21 06:57:10,197] INFO - modules.email_reader -  Processando e-mail: 
+[2026-04-21 06:57:10,197] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-21 06:57:10,540] INFO - modules.email_reader -  Processando e-mail: 
+[2026-04-21 06:57:10,540] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-21 06:57:10,862] INFO - modules.email_reader -  Processando e-mail: ENC: Oportunidade TaxOne
+[2026-04-21 06:57:10,862] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-21 06:57:11,245] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-21 06:57:11,573] INFO - utils.file_handler -  Arquivo salvo: c:\RPA\RPA_Banco_Talentos\utils\Temp\email\Currículo_MariaFernanda.docx
+[2026-04-21 06:57:11,573] INFO - modules.email_reader -  Anexo baixado: Currículo_MariaFernanda.docx
+[2026-04-21 06:57:11,573] INFO - modules.email_reader -  Total de arquivos baixados do e-mail: 2
+[2026-04-21 06:57:11,574] INFO - __main__ - 
+Total de arquivos capturados: 2
+[2026-04-21 06:57:11,574] INFO - __main__ - 
+ETAPA 2: PROCESSANDO ARQUIVOS
+[2026-04-21 06:57:11,574] INFO - __main__ - --------------------------------------------------------------------------------
+[2026-04-21 06:57:11,574] INFO - __main__ - 
+Processando: Currículo_MariaFernanda.docx
+[2026-04-21 06:57:11,582] INFO - __main__ -  Extraindo dados com Gemini...
+[2026-04-21 06:57:14,448] INFO - config.gemini -  Gemini API configurada com sucesso
+[2026-04-21 06:57:31,257] INFO - utils.file_handler - Convertendo arquivo: c:\RPA\RPA_Banco_Talentos\utils\Temp\email\Currículo_MariaFernanda.docx
+[2026-04-21 06:57:40,029] INFO - utils.file_handler - STDOUT: convert C:\RPA\RPA_Banco_Talentos\utils\Temp\email\Currículo_MariaFernanda.docx as a Writer document -> c:\RPA\RPA_Banco_Talentos\utils\Temp\Currículo_MariaFernanda.pdf using filter : writer_pdf_Export
+
+[2026-04-21 06:57:40,030] INFO - utils.file_handler - STDERR: Could not find platform independent libraries <prefix>
+
+[2026-04-21 06:57:40,030] INFO - utils.file_handler - PDF gerado com sucesso: c:\RPA\RPA_Banco_Talentos\utils\Temp\Currículo_MariaFernanda.pdf
+[2026-04-21 06:57:40,031] INFO - modules.gemini_extractor -  Processando PDF (tentativa 1/4): c:\RPA\RPA_Banco_Talentos\utils\Temp\Currículo_MariaFernanda.pdf
+[2026-04-21 06:57:41,528] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+[2026-04-21 06:57:43,188] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AMNfjG2YzYzE1qGEfFjto8Xqt4TpnH-iieYxNEJ3V1ae1i0co62-x1vbzyovjpDBaawD8yDv4l_giRRMogcZlGA-bFUrBNDrq2zeSsFG_5dpjQ&upload_protocol=resumable "HTTP/1.1 200 OK"
+[2026-04-21 06:57:43,193] INFO - modules.gemini_extractor -  PDF enviado para Gemini
+[2026-04-21 06:57:43,195] INFO - google_genai.models - AFC is enabled with max remote calls: 10.
+[2026-04-21 06:57:46,169] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+[2026-04-21 06:57:46,173] INFO - modules.gemini_extractor -  Dados extraídos com sucesso
+[2026-04-21 06:57:46,175] INFO - utils.file_handler -  Arquivo deletado: c:\RPA\RPA_Banco_Talentos\utils\Temp\Currículo_MariaFernanda.pdf
+[2026-04-21 06:57:46,176] INFO - __main__ -  Dados extraídos: MARIA FERNANDA VALDRIGHI
+[2026-04-21 06:57:46,537] INFO - config.mongodb -  Conectado ao MongoDB: Banco_de_Talentos
+[2026-04-21 06:57:46,635] INFO - config.mongodb -  ndices criados/verificados no MongoDB
+[2026-04-21 06:57:46,721] INFO - modules.deduplication -  Novo candidato inserido: Maria Fernanda Valdrighi (ID: 69e74a1aed4c9aefc8ed1045)
+[2026-04-21 06:57:46,722] INFO - __main__ -  Novo candidato: Maria Fernanda Valdrighi
+[2026-04-21 06:57:46,724] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-21 06:57:47,479] INFO - modules.email_reader - E-mail movido para CVs_Processados
+[2026-04-21 06:57:47,479] INFO - __main__ - 
+Processando: Currículo_MariaFernanda.docx
+[2026-04-21 06:57:47,480] INFO - __main__ -  Extraindo dados com Gemini...
+[2026-04-21 06:57:50,531] INFO - utils.file_handler - Convertendo arquivo: c:\RPA\RPA_Banco_Talentos\utils\Temp\email\Currículo_MariaFernanda.docx
+[2026-04-21 06:57:53,943] INFO - utils.file_handler - STDOUT: convert C:\RPA\RPA_Banco_Talentos\utils\Temp\email\Currículo_MariaFernanda.docx as a Writer document -> c:\RPA\RPA_Banco_Talentos\utils\Temp\Currículo_MariaFernanda.pdf using filter : writer_pdf_Export
+
+[2026-04-21 06:57:53,943] INFO - utils.file_handler - STDERR: Could not find platform independent libraries <prefix>
+
+[2026-04-21 06:57:53,944] INFO - utils.file_handler - PDF gerado com sucesso: c:\RPA\RPA_Banco_Talentos\utils\Temp\Currículo_MariaFernanda.pdf
+[2026-04-21 06:57:53,944] INFO - modules.gemini_extractor -  Processando PDF (tentativa 1/4): c:\RPA\RPA_Banco_Talentos\utils\Temp\Currículo_MariaFernanda.pdf
+[2026-04-21 06:57:55,053] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+[2026-04-21 06:57:56,696] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AMNfjG1Cr4vN_Xwr3kOF9KoJQUrkANUKEKxFhQ4l0rxMXb4HDnr1sHKaSjQTcA2CtdWwQp1gbpmaMKfKc4sNTGI3ARAoxp6P_FAQ56fdLfzHSA&upload_protocol=resumable "HTTP/1.1 200 OK"
+[2026-04-21 06:57:56,697] INFO - modules.gemini_extractor -  PDF enviado para Gemini
+[2026-04-21 06:57:56,698] INFO - google_genai.models - AFC is enabled with max remote calls: 10.
+[2026-04-21 06:58:00,017] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+[2026-04-21 06:58:00,019] INFO - modules.gemini_extractor -  Dados extraídos com sucesso
+[2026-04-21 06:58:00,020] INFO - utils.file_handler -  Arquivo deletado: c:\RPA\RPA_Banco_Talentos\utils\Temp\Currículo_MariaFernanda.pdf
+[2026-04-21 06:58:18,701] INFO - __main__ -  Dados extraídos: MARIA FERNANDA VALDRIGHI
+[2026-04-21 06:58:18,716] INFO - modules.deduplication -  Duplicata encontrada por hash: 92e85e229feda5958b80b93baeb72b04baa85d00c5c2bbb6178b4ed24cfcdb87
+[2026-04-21 06:58:18,717] INFO - modules.deduplication -  Mudana detectada em Telefone
+[2026-04-21 06:58:18,732] INFO - modules.deduplication -  Candidato atualizado: Maria Fernanda Valdrighi
+[2026-04-21 06:58:18,732] INFO - __main__ -  Candidato atualizado: Maria Fernanda Valdrighi
+[2026-04-21 06:58:18,733] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-21 06:58:19,337] INFO - modules.email_reader - E-mail movido para CVs_Processados
+[2026-04-21 06:58:19,337] INFO - __main__ - 
+ ETAPA 3: GERANDO RELATÓRIO
+[2026-04-21 06:58:19,337] INFO - __main__ - --------------------------------------------------------------------------------
+[2026-04-21 06:58:19,338] INFO - __main__ - 
+================================================================================
+[2026-04-21 06:58:19,338] INFO - __main__ -  RESUMO DA EXECUÇÃO
+[2026-04-21 06:58:19,338] INFO - __main__ - ================================================================================
+[2026-04-21 06:58:19,338] INFO - __main__ -  E-mails processados: 2
+[2026-04-21 06:58:19,338] INFO - __main__ -  Mensagens WhatsApp processadas: 0
+[2026-04-21 06:58:19,339] INFO - __main__ -  Total de arquivos baixados: 2
+[2026-04-21 06:58:19,339] INFO - __main__ -  Arquivos processados: 2
+[2026-04-21 06:58:19,339] INFO - __main__ -  Novos candidatos: 1
+[2026-04-21 06:58:19,339] INFO - __main__ -  Candidatos atualizados: 1
+[2026-04-21 06:58:19,339] INFO - __main__ - Sem mudanças: 0
+[2026-04-21 06:58:19,340] INFO - __main__ -  Erros: 0
+[2026-04-21 06:58:19,404] INFO - modules.mongodb_handler -  Estatsticas: {'total_candidatos': 31, 'origem_email': 31, 'origem_whatsapp': 0, 'com_email': 31, 'com_telefone': 30}
+[2026-04-21 06:58:19,404] INFO - __main__ - 
+ Estatísticas do MongoDB:
+[2026-04-21 06:58:19,404] INFO - __main__ -   Total de candidatos: 31
+[2026-04-21 06:58:19,404] INFO - __main__ -   Origem E-mail: 31
+[2026-04-21 06:58:19,405] INFO - __main__ -   Origem WhatsApp: 0
+[2026-04-21 06:58:19,405] INFO - __main__ -   Com E-mail: 31
+[2026-04-21 06:58:19,405] INFO - __main__ -   Com Telefone: 30
+[2026-04-21 06:58:19,405] INFO - __main__ - ================================================================================
+[2026-04-21 06:58:19,405] INFO - __main__ - 
+Limpando arquivos temporários...
+[2026-04-21 06:58:19,408] INFO - utils.file_handler -  Arquivos temporários limpos
+[2026-04-21 06:58:19,408] INFO - __main__ - 
+================================================================================
+[2026-04-21 06:58:19,408] INFO - __main__ -  PROCESSO CONCLUÍDO COM SUCESSO
+[2026-04-21 06:58:19,408] INFO - __main__ - ================================================================================
+[2026-04-21 06:58:26,146] INFO - modules.mongodb_handler -  Estatsticas: {'total_candidatos': 31, 'origem_email': 31, 'origem_whatsapp': 0, 'com_email': 31, 'com_telefone': 30}
+[2026-04-21 06:58:30,233] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-21 07:01:28,544] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso

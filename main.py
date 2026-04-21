@@ -22,6 +22,7 @@ from modules.gemini_extractor import extract_cv_data
 from modules.deduplication import process_candidate_data
 from utils.file_handler import FileHandler
 from modules.mongodb_handler import get_mongodb_handler
+from utils.email_sender import enviar_email_resumo_graph
 
 class BancoTalentosOrchestrator:
     """Orquestra o fluxo completo do sistema"""
@@ -60,7 +61,7 @@ class BancoTalentosOrchestrator:
             self.logger.info("\nProcessando e-mails...")
             email_files = process_emails()
             all_files.extend(email_files)
-            self.stats['emails_processados'] = len(email_files)
+            self.stats['emails_processados'] = len(set(f['email_id'] for f in email_files if f.get('email_id')))
             
             # Processar WhatsApp
             # self.logger.info("\nProcessando mensagens WhatsApp...")
@@ -74,6 +75,11 @@ class BancoTalentosOrchestrator:
             if not all_files:
                 self.logger.warning("Nenhum arquivo foi capturado")
                 self._print_summary()
+                handler = get_mongodb_handler()
+                db_stats = handler.get_statistics()
+                total_candidatos = db_stats.get('total_candidatos', 0)
+
+                enviar_email_resumo_graph(self.stats, total_candidatos)
                 return
             
             # Etapa 2: Processar arquivos
@@ -166,10 +172,22 @@ class BancoTalentosOrchestrator:
             self.logger.info("\n" + "=" * 80)
             self.logger.info(" PROCESSO CONCLUÍDO COM SUCESSO")
             self.logger.info("=" * 80)
+
+            handler = get_mongodb_handler()
+            db_stats = handler.get_statistics()
+            total_candidatos = db_stats.get('total_candidatos', 0)
+
+            enviar_email_resumo_graph(self.stats, total_candidatos)
             
         except Exception as e:
-            self.logger.error(f" Erro crítico no orquestrador: {e}")
+            self.logger.error(f"Erro crítico no orquestrador: {e}")
             self._print_summary()
+
+            handler = get_mongodb_handler()
+            db_stats = handler.get_statistics()
+            total_candidatos = db_stats.get('total_candidatos', 0)
+
+            enviar_email_resumo_graph(self.stats, total_candidatos)
     
     def _print_summary(self):
         """Imprime resumo das operações"""
