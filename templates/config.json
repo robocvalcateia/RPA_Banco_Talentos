@@ -1,7 +1,7 @@
 {
   "templates": [
     {
-      "id": "CV",
+      "id": "cv_alcateia",
       "nome": "CV Alcateia",
       "arquivo": "template_1_cv.docx",
       "placeholders": {
@@ -22,7 +22,7 @@
       }
     },
     {
-      "id": "CV",
+      "id": "cv_dtt",
       "nome": "CV DTT",
       "arquivo": "template_2_cv.docx",
       "placeholders": {
