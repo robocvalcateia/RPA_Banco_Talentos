@@ -255,14 +255,7 @@ const handleProcessarEmails = async () => {
                 className="pl-10 h-10 border-slate-300"
               />
             </div>
-            <Button
-              onClick={() =>setFilterType(filterType === "nome"? "skill": filterType === "skill"? "endereco": "nome")}
-              variant="outline"
-              size="sm"
-              className="min-w-max border-[#08B79B] text-[#08B79B] hover:bg-[#08B79B] hover:text-white"
-            >
-              {filterType === "nome"? "Buscar por Skill": filterType === "skill"? "Buscar por Endereço": "Buscar por Nome"}
-            </Button>
+
           </div>
         </div>
       </header>
