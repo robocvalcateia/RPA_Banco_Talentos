@@ -188,3 +188,241 @@ Limpando arquivos temporários...
 [2026-04-22 11:48:02,097] INFO - __main__ - ================================================================================
 [2026-04-22 11:48:06,096] INFO - modules.mongodb_handler -  Estatsticas: {'total_candidatos': 31, 'origem_email': 31, 'origem_whatsapp': 0, 'com_email': 31, 'com_telefone': 30}
 [2026-04-22 11:48:09,901] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 14:15:23,632] INFO - utils.logger - ================================================================================
+[2026-04-22 14:15:23,632] INFO - utils.logger - INICIANDO BANCO DE TALENTOS
+[2026-04-22 14:15:23,632] INFO - utils.logger - ================================================================================
+[2026-04-22 14:15:31,361] INFO - config.microsoft_graph -  Microsoft Graph configurado com sucesso
+[2026-04-22 14:15:31,362] INFO - __main__ - ================================================================================
+[2026-04-22 14:15:31,362] INFO - __main__ -  INICIANDO BANCO DE TALENTOS
+[2026-04-22 14:15:31,362] INFO - __main__ - ================================================================================
+[2026-04-22 14:15:31,362] INFO - __main__ - 
+ETAPA 1: CAPTURANDO ARQUIVOS
+[2026-04-22 14:15:31,362] INFO - __main__ - --------------------------------------------------------------------------------
+[2026-04-22 14:15:31,363] INFO - __main__ - 
+Processando e-mails...
+[2026-04-22 14:15:33,591] INFO - modules.email_reader -  Iniciando leitura de e-mails...
+[2026-04-22 14:15:36,739] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 14:15:37,052] INFO - modules.email_reader -  2 e-mails encontrados
+[2026-04-22 14:15:37,053] INFO - modules.email_reader -  Processando e-mail: 
+[2026-04-22 14:15:37,054] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 14:16:35,658] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 14:21:47,289] INFO - utils.logger - ================================================================================
+[2026-04-22 14:21:47,290] INFO - utils.logger - INICIANDO BANCO DE TALENTOS
+[2026-04-22 14:21:47,290] INFO - utils.logger - ================================================================================
+[2026-04-22 14:21:51,363] INFO - config.microsoft_graph -  Microsoft Graph configurado com sucesso
+[2026-04-22 14:21:51,363] INFO - __main__ - ================================================================================
+[2026-04-22 14:21:51,364] INFO - __main__ -  INICIANDO BANCO DE TALENTOS
+[2026-04-22 14:21:51,364] INFO - __main__ - ================================================================================
+[2026-04-22 14:21:51,365] INFO - __main__ - 
+ETAPA 1: CAPTURANDO ARQUIVOS
+[2026-04-22 14:21:51,365] INFO - __main__ - --------------------------------------------------------------------------------
+[2026-04-22 14:21:51,366] INFO - __main__ - 
+Processando e-mails...
+[2026-04-22 14:21:53,772] INFO - modules.email_reader -  Iniciando leitura de e-mails...
+[2026-04-22 14:21:59,062] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 14:21:59,394] INFO - modules.email_reader -  2 e-mails encontrados
+[2026-04-22 14:21:59,395] INFO - modules.email_reader -  Processando e-mail: 
+[2026-04-22 14:21:59,396] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 14:21:59,774] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 14:22:00,228] INFO - utils.file_handler -  Arquivo salvo: c:\RPA\RPA_Banco_Talentos\utils\Temp\email_item\CV Renato PO V3-5.pdf
+[2026-04-22 14:22:00,228] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 14:22:00,657] INFO - utils.file_handler -  Arquivo salvo: c:\RPA\RPA_Banco_Talentos\utils\Temp\email_item\CV6_Eliani_Figlioli_ProjectManager_PT_2025.pdf
+[2026-04-22 14:22:00,658] INFO - modules.email_reader -  Total de arquivos baixados do e-mail: 3
+[2026-04-22 14:22:27,290] INFO - utils.logger - ================================================================================
+[2026-04-22 14:22:27,291] INFO - utils.logger - INICIANDO BANCO DE TALENTOS
+[2026-04-22 14:22:27,291] INFO - utils.logger - ================================================================================
+[2026-04-22 14:22:31,613] INFO - config.microsoft_graph -  Microsoft Graph configurado com sucesso
+[2026-04-22 14:22:31,614] INFO - __main__ - ================================================================================
+[2026-04-22 14:22:31,614] INFO - __main__ -  INICIANDO BANCO DE TALENTOS
+[2026-04-22 14:22:31,614] INFO - __main__ - ================================================================================
+[2026-04-22 14:22:31,614] INFO - __main__ - 
+ETAPA 1: CAPTURANDO ARQUIVOS
+[2026-04-22 14:22:31,614] INFO - __main__ - --------------------------------------------------------------------------------
+[2026-04-22 14:22:31,615] INFO - __main__ - 
+Processando e-mails...
+[2026-04-22 14:22:31,615] INFO - modules.email_reader -  Iniciando leitura de e-mails...
+[2026-04-22 14:22:31,831] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 14:22:32,101] INFO - modules.email_reader -  2 e-mails encontrados
+[2026-04-22 14:22:32,102] INFO - modules.email_reader -  Processando e-mail: 
+[2026-04-22 14:22:32,103] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 14:22:41,167] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 14:22:41,942] INFO - utils.file_handler -  Arquivo salvo: c:\RPA\RPA_Banco_Talentos\utils\Temp\email_item\CV Renato PO V3-5.pdf
+[2026-04-22 14:23:17,485] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 14:23:17,867] INFO - utils.file_handler -  Arquivo salvo: c:\RPA\RPA_Banco_Talentos\utils\Temp\email_item\CV6_Eliani_Figlioli_ProjectManager_PT_2025.pdf
+[2026-04-22 14:23:29,464] INFO - modules.email_reader -  Total de arquivos baixados do e-mail: 3
+[2026-04-22 14:23:34,314] INFO - __main__ - 
+Total de arquivos capturados: 3
+[2026-04-22 14:23:36,326] INFO - __main__ - 
+ETAPA 2: PROCESSANDO ARQUIVOS
+[2026-04-22 14:23:36,326] INFO - __main__ - --------------------------------------------------------------------------------
+[2026-04-22 14:23:36,326] INFO - __main__ - 
+Processando: CV Renato PO V3-5.pdf
+[2026-04-22 14:23:36,350] INFO - __main__ -  Extraindo dados com Gemini...
+[2026-04-22 14:23:37,468] INFO - config.gemini -  Gemini API configurada com sucesso
+[2026-04-22 14:23:37,468] INFO - modules.gemini_extractor -  Processando PDF (tentativa 1/4): c:\RPA\RPA_Banco_Talentos\utils\Temp\email_item\CV Renato PO V3-5.pdf
+[2026-04-22 14:23:38,647] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+[2026-04-22 14:23:40,438] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AMNfjG3Ihvh3PKVtv1TR-PcWRKzEm_bebBns244POvsQdgYpbiBwXLjF2gpmgn_v-TufuuC42FFMbq1fzdlvPA3WCeobKNgBfqlHu6Cl_k8S40s&upload_protocol=resumable "HTTP/1.1 200 OK"
+[2026-04-22 14:23:40,440] INFO - modules.gemini_extractor -  PDF enviado para Gemini
+[2026-04-22 14:23:40,441] INFO - google_genai.models - AFC is enabled with max remote calls: 10.
+[2026-04-22 14:23:45,328] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+[2026-04-22 14:23:45,331] INFO - modules.gemini_extractor -  Dados extraídos com sucesso
+[2026-04-22 14:23:45,331] INFO - __main__ -  Dados extraídos: Paulo Renato Batista Alexandre
+[2026-04-22 14:23:45,772] INFO - config.mongodb -  Conectado ao MongoDB: Banco_de_Talentos
+[2026-04-22 14:23:45,881] INFO - config.mongodb -  ndices criados/verificados no MongoDB
+[2026-04-22 14:23:45,951] INFO - modules.deduplication -  Novo candidato inserido: Paulo Renato Batista Alexandre (ID: 69e904217d5448f1d3d83a99)
+[2026-04-22 14:23:53,187] INFO - __main__ -  Novo candidato: Paulo Renato Batista Alexandre
+[2026-04-22 14:23:57,938] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 14:23:58,755] INFO - modules.email_reader - E-mail movido para CVs_Processados
+[2026-04-22 14:23:58,756] INFO - __main__ - 
+Processando: CV6_Eliani_Figlioli_ProjectManager_PT_2025.pdf
+[2026-04-22 14:23:58,766] INFO - __main__ -  Extraindo dados com Gemini...
+[2026-04-22 14:23:58,767] INFO - modules.gemini_extractor -  Processando PDF (tentativa 1/4): c:\RPA\RPA_Banco_Talentos\utils\Temp\email_item\CV6_Eliani_Figlioli_ProjectManager_PT_2025.pdf
+[2026-04-22 14:23:59,925] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+[2026-04-22 14:24:01,310] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AMNfjG22pdTVKcpkODbFLRPKffvAX0NltdfCx8SWGJMcZHfWulgsWZ3J7ojnpLpw2gvK9M9DDOIg9KzOroo2tkWGuEmN4mQkKGSFDmz17x22bTc&upload_protocol=resumable "HTTP/1.1 200 OK"
+[2026-04-22 14:24:01,314] INFO - modules.gemini_extractor -  PDF enviado para Gemini
+[2026-04-22 14:24:01,315] INFO - google_genai.models - AFC is enabled with max remote calls: 10.
+[2026-04-22 14:24:07,594] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+[2026-04-22 14:24:07,596] INFO - modules.gemini_extractor -  Dados extraídos com sucesso
+[2026-04-22 14:24:07,597] INFO - __main__ -  Dados extraídos: Eliani Simoni Figlioli
+[2026-04-22 14:24:07,654] INFO - modules.deduplication -  Novo candidato inserido: Eliani Simoni Figlioli (ID: 69e904377d5448f1d3d83a9a)
+[2026-04-22 14:24:07,654] INFO - __main__ -  Novo candidato: Eliani Simoni Figlioli
+[2026-04-22 14:24:07,655] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 14:24:08,750] ERROR - modules.email_reader - Erro ao mover e-mail: 404 Client Error: Not Found for url: https://graph.microsoft.com/v1.0/users/robocv@alcateiaconsulting.com.br/messages/AAMkADNjZDYxMjI4LTI1ODUtNGU4ZS04ZDkzLWFlNzQ2N2IzY2E5ZgBGAAAAAACs-FAKDrBjTIhCgv9aBd_4BwD4CDsgXwQmTZ2NEG4mHMdyAAAAAAEMAAD4CDsgXwQmTZ2NEG4mHMdyAAAW4cADAAA=/move
+[2026-04-22 14:24:08,751] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 14:24:10,121] INFO - modules.email_reader - E-mail movido para CVs_Processados_Erro
+[2026-04-22 14:24:10,122] INFO - __main__ - 
+ ETAPA 3: GERANDO RELATÓRIO
+[2026-04-22 14:24:10,122] INFO - __main__ - --------------------------------------------------------------------------------
+[2026-04-22 14:24:10,122] INFO - __main__ - 
+================================================================================
+[2026-04-22 14:24:10,122] INFO - __main__ -  RESUMO DA EXECUÇÃO
+[2026-04-22 14:24:10,122] INFO - __main__ - ================================================================================
+[2026-04-22 14:24:10,123] INFO - __main__ -  E-mails processados: 2
+[2026-04-22 14:24:10,123] INFO - __main__ -  Mensagens WhatsApp processadas: 0
+[2026-04-22 14:24:10,123] INFO - __main__ -  Total de arquivos baixados: 3
+[2026-04-22 14:24:10,123] INFO - __main__ -  Arquivos processados: 2
+[2026-04-22 14:24:10,123] INFO - __main__ -  Novos candidatos: 2
+[2026-04-22 14:24:10,123] INFO - __main__ -  Candidatos atualizados: 0
+[2026-04-22 14:24:10,123] INFO - __main__ - Sem mudanças: 0
+[2026-04-22 14:24:10,124] INFO - __main__ -  Erros: 1
+[2026-04-22 14:24:10,186] INFO - modules.mongodb_handler -  Estatsticas: {'total_candidatos': 34, 'origem_email': 34, 'origem_whatsapp': 0, 'com_email': 34, 'com_telefone': 33}
+[2026-04-22 14:24:10,187] INFO - __main__ - 
+ Estatísticas do MongoDB:
+[2026-04-22 14:24:10,187] INFO - __main__ -   Total de candidatos: 34
+[2026-04-22 14:24:10,187] INFO - __main__ -   Origem E-mail: 34
+[2026-04-22 14:24:10,187] INFO - __main__ -   Origem WhatsApp: 0
+[2026-04-22 14:24:10,188] INFO - __main__ -   Com E-mail: 34
+[2026-04-22 14:24:10,188] INFO - __main__ -   Com Telefone: 33
+[2026-04-22 14:24:10,188] INFO - __main__ - ================================================================================
+[2026-04-22 14:24:10,188] INFO - __main__ - 
+Limpando arquivos temporários...
+[2026-04-22 14:24:10,192] INFO - utils.file_handler -  Arquivos temporários limpos
+[2026-04-22 14:24:10,192] INFO - __main__ - 
+================================================================================
+[2026-04-22 14:24:10,193] INFO - __main__ -  PROCESSO CONCLUÍDO COM SUCESSO
+[2026-04-22 14:24:10,193] INFO - __main__ - ================================================================================
+[2026-04-22 14:24:17,391] INFO - modules.mongodb_handler -  Estatsticas: {'total_candidatos': 34, 'origem_email': 34, 'origem_whatsapp': 0, 'com_email': 34, 'com_telefone': 33}
+[2026-04-22 14:24:19,955] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 14:25:39,674] INFO - utils.logger - ================================================================================
+[2026-04-22 14:25:39,675] INFO - utils.logger - INICIANDO BANCO DE TALENTOS
+[2026-04-22 14:25:39,675] INFO - utils.logger - ================================================================================
+[2026-04-22 14:25:43,769] INFO - config.microsoft_graph -  Microsoft Graph configurado com sucesso
+[2026-04-22 14:25:43,769] INFO - __main__ - ================================================================================
+[2026-04-22 14:25:43,769] INFO - __main__ -  INICIANDO BANCO DE TALENTOS
+[2026-04-22 14:25:43,770] INFO - __main__ - ================================================================================
+[2026-04-22 14:25:43,770] INFO - __main__ - 
+ETAPA 1: CAPTURANDO ARQUIVOS
+[2026-04-22 14:25:43,770] INFO - __main__ - --------------------------------------------------------------------------------
+[2026-04-22 14:25:43,770] INFO - __main__ - 
+Processando e-mails...
+[2026-04-22 14:25:43,771] INFO - modules.email_reader -  Iniciando leitura de e-mails...
+[2026-04-22 14:25:44,240] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 14:25:44,537] INFO - modules.email_reader -  1 e-mails encontrados
+[2026-04-22 14:25:44,538] INFO - modules.email_reader -  Processando e-mail: ENC: Bate papo João Bosco
+[2026-04-22 14:25:44,539] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 14:25:51,692] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 14:25:52,160] INFO - utils.file_handler -  Arquivo salvo: c:\RPA\RPA_Banco_Talentos\utils\Temp\email\JoaoBosco A Melo (Por) - Apr2026.pdf
+[2026-04-22 14:25:52,161] INFO - modules.email_reader -  Anexo baixado: JoaoBosco A Melo (Por) - Apr2026.pdf
+[2026-04-22 14:26:11,521] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 14:26:12,078] INFO - utils.file_handler -  Arquivo salvo: c:\RPA\RPA_Banco_Talentos\utils\Temp\email\JoaoBosco A Melo (eng) - Apr2026.pdf
+[2026-04-22 14:26:12,079] INFO - modules.email_reader -  Anexo baixado: JoaoBosco A Melo (eng) - Apr2026.pdf
+[2026-04-22 14:26:26,813] INFO - modules.email_reader -  Total de arquivos baixados do e-mail: 4
+[2026-04-22 14:26:29,806] INFO - __main__ - 
+Total de arquivos capturados: 4
+[2026-04-22 14:26:30,467] INFO - __main__ - 
+ETAPA 2: PROCESSANDO ARQUIVOS
+[2026-04-22 14:26:30,467] INFO - __main__ - --------------------------------------------------------------------------------
+[2026-04-22 14:26:30,468] INFO - __main__ - 
+Processando: JoaoBosco A Melo (Por) - Apr2026.pdf
+[2026-04-22 14:26:30,495] INFO - __main__ -  Extraindo dados com Gemini...
+[2026-04-22 14:26:31,642] INFO - config.gemini -  Gemini API configurada com sucesso
+[2026-04-22 14:26:31,643] INFO - modules.gemini_extractor -  Processando PDF (tentativa 1/4): c:\RPA\RPA_Banco_Talentos\utils\Temp\email\JoaoBosco A Melo (Por) - Apr2026.pdf
+[2026-04-22 14:26:32,925] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+[2026-04-22 14:26:35,200] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AMNfjG0AbxTOMzgH6SvhickCvo9tWufAWeCC_fG0RlKxm4Y6HCwAut1tu_whq1wROtOxN3zF-k1sRbs0a9EjhlN_gN5nqF1xRwkAASeTytbwcDA&upload_protocol=resumable "HTTP/1.1 200 OK"
+[2026-04-22 14:26:35,206] INFO - modules.gemini_extractor -  PDF enviado para Gemini
+[2026-04-22 14:26:35,207] INFO - google_genai.models - AFC is enabled with max remote calls: 10.
+[2026-04-22 14:26:41,831] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+[2026-04-22 14:26:41,834] INFO - modules.gemini_extractor -  Dados extraídos com sucesso
+[2026-04-22 14:26:41,834] INFO - __main__ -  Dados extraídos: JOÃO BÔSCO A. MELO
+[2026-04-22 14:26:42,179] INFO - config.mongodb -  Conectado ao MongoDB: Banco_de_Talentos
+[2026-04-22 14:26:42,285] INFO - config.mongodb -  ndices criados/verificados no MongoDB
+[2026-04-22 14:26:42,311] INFO - modules.deduplication -  Duplicata encontrada por email: joaoboscomelo@gmail.com
+[2026-04-22 14:26:42,311] INFO - modules.deduplication -  Mudana detectada em Telefone
+[2026-04-22 14:26:42,332] INFO - modules.deduplication -  Candidato atualizado: João Bôsco A. Melo
+[2026-04-22 14:26:42,333] INFO - __main__ -  Candidato atualizado: João Bôsco A. Melo
+[2026-04-22 14:26:42,335] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 14:26:43,548] INFO - modules.email_reader - E-mail movido para CVs_Processados
+[2026-04-22 14:26:43,548] INFO - __main__ - 
+Processando: JoaoBosco A Melo (eng) - Apr2026.pdf
+[2026-04-22 14:26:43,561] INFO - __main__ -  Extraindo dados com Gemini...
+[2026-04-22 14:26:43,561] INFO - modules.gemini_extractor -  Processando PDF (tentativa 1/4): c:\RPA\RPA_Banco_Talentos\utils\Temp\email\JoaoBosco A Melo (eng) - Apr2026.pdf
+[2026-04-22 14:26:44,708] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+[2026-04-22 14:26:45,916] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AMNfjG0e2tKeY7tW0r3TJK8goD0JuiQb2YDM6C14MOVO8lllxVTtBElodxfgypq7QZY57sJbdncv9yhOheE8MLdM0cmBhsK30vutlc40EnkoTA&upload_protocol=resumable "HTTP/1.1 200 OK"
+[2026-04-22 14:26:45,917] INFO - modules.gemini_extractor -  PDF enviado para Gemini
+[2026-04-22 14:26:45,917] INFO - google_genai.models - AFC is enabled with max remote calls: 10.
+[2026-04-22 14:26:50,348] INFO - httpx - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent "HTTP/1.1 200 OK"
+[2026-04-22 14:26:50,349] INFO - modules.gemini_extractor -  Dados extraídos com sucesso
+[2026-04-22 14:26:50,349] INFO - __main__ -  Dados extraídos: JOÃO BÔSCO A. MELO
+[2026-04-22 14:26:50,368] INFO - modules.deduplication -  Duplicata encontrada por email: joaoboscomelo@gmail.com
+[2026-04-22 14:26:50,369] INFO - modules.deduplication -  Mudana detectada em Telefone
+[2026-04-22 14:26:50,383] INFO - modules.deduplication -  Candidato atualizado: João Bôsco A. Melo
+[2026-04-22 14:26:50,383] INFO - __main__ -  Candidato atualizado: João Bôsco A. Melo
+[2026-04-22 14:26:50,384] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 14:26:50,917] ERROR - modules.email_reader - Erro ao mover e-mail: 404 Client Error: Not Found for url: https://graph.microsoft.com/v1.0/users/robocv@alcateiaconsulting.com.br/messages/AAMkADNjZDYxMjI4LTI1ODUtNGU4ZS04ZDkzLWFlNzQ2N2IzY2E5ZgBGAAAAAACs-FAKDrBjTIhCgv9aBd_4BwD4CDsgXwQmTZ2NEG4mHMdyAAAAAAEMAAD4CDsgXwQmTZ2NEG4mHMdyAAAW4cAEAAA=/move
+[2026-04-22 14:26:50,918] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 14:26:51,477] ERROR - modules.email_reader - Erro ao mover e-mail: 404 Client Error: Not Found for url: https://graph.microsoft.com/v1.0/users/robocv@alcateiaconsulting.com.br/messages/AAMkADNjZDYxMjI4LTI1ODUtNGU4ZS04ZDkzLWFlNzQ2N2IzY2E5ZgBGAAAAAACs-FAKDrBjTIhCgv9aBd_4BwD4CDsgXwQmTZ2NEG4mHMdyAAAAAAEMAAD4CDsgXwQmTZ2NEG4mHMdyAAAW4cAEAAA=/move
+[2026-04-22 14:26:51,477] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 14:26:52,077] ERROR - modules.email_reader - Erro ao mover e-mail: 404 Client Error: Not Found for url: https://graph.microsoft.com/v1.0/users/robocv@alcateiaconsulting.com.br/messages/AAMkADNjZDYxMjI4LTI1ODUtNGU4ZS04ZDkzLWFlNzQ2N2IzY2E5ZgBGAAAAAACs-FAKDrBjTIhCgv9aBd_4BwD4CDsgXwQmTZ2NEG4mHMdyAAAAAAEMAAD4CDsgXwQmTZ2NEG4mHMdyAAAW4cAEAAA=/move
+[2026-04-22 14:26:52,078] INFO - __main__ - 
+ ETAPA 3: GERANDO RELATÓRIO
+[2026-04-22 14:26:52,078] INFO - __main__ - --------------------------------------------------------------------------------
+[2026-04-22 14:26:52,078] INFO - __main__ - 
+================================================================================
+[2026-04-22 14:26:52,078] INFO - __main__ -  RESUMO DA EXECUÇÃO
+[2026-04-22 14:26:52,079] INFO - __main__ - ================================================================================
+[2026-04-22 14:26:52,079] INFO - __main__ -  E-mails processados: 1
+[2026-04-22 14:26:52,079] INFO - __main__ -  Mensagens WhatsApp processadas: 0
+[2026-04-22 14:26:52,079] INFO - __main__ -  Total de arquivos baixados: 4
+[2026-04-22 14:26:52,080] INFO - __main__ -  Arquivos processados: 2
+[2026-04-22 14:26:52,080] INFO - __main__ -  Novos candidatos: 0
+[2026-04-22 14:26:52,080] INFO - __main__ -  Candidatos atualizados: 2
+[2026-04-22 14:26:52,080] INFO - __main__ - Sem mudanças: 0
+[2026-04-22 14:26:52,080] INFO - __main__ -  Erros: 2
+[2026-04-22 14:26:52,186] INFO - modules.mongodb_handler -  Estatsticas: {'total_candidatos': 34, 'origem_email': 34, 'origem_whatsapp': 0, 'com_email': 34, 'com_telefone': 33}
+[2026-04-22 14:26:52,186] INFO - __main__ - 
+ Estatísticas do MongoDB:
+[2026-04-22 14:26:52,187] INFO - __main__ -   Total de candidatos: 34
+[2026-04-22 14:26:52,187] INFO - __main__ -   Origem E-mail: 34
+[2026-04-22 14:26:52,187] INFO - __main__ -   Origem WhatsApp: 0
+[2026-04-22 14:26:52,187] INFO - __main__ -   Com E-mail: 34
+[2026-04-22 14:26:52,188] INFO - __main__ -   Com Telefone: 33
+[2026-04-22 14:26:52,188] INFO - __main__ - ================================================================================
+[2026-04-22 14:26:52,188] INFO - __main__ - 
+Limpando arquivos temporários...
+[2026-04-22 14:26:52,190] INFO - utils.file_handler -  Arquivos temporários limpos
+[2026-04-22 14:26:52,190] INFO - __main__ - 
+================================================================================
+[2026-04-22 14:26:52,191] INFO - __main__ -  PROCESSO CONCLUÍDO COM SUCESSO
+[2026-04-22 14:26:52,191] INFO - __main__ - ================================================================================
+[2026-04-22 14:26:52,239] INFO - modules.mongodb_handler -  Estatsticas: {'total_candidatos': 34, 'origem_email': 34, 'origem_whatsapp': 0, 'com_email': 34, 'com_telefone': 33}
+[2026-04-22 14:26:58,578] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso

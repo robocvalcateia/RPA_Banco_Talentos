@@ -5,6 +5,8 @@ import requests
 import os
 from datetime import datetime, timedelta
 import logging
+import email
+from email import policy
 from config.microsoft_graph import get_microsoft_graph
 from utils.file_handler import FileHandler
 from utils.validators import Validators
@@ -71,7 +73,45 @@ class EmailReader:
         except Exception as e:
             logger.error(f" Erro ao obter anexos do e-mail {email_id}: {e}")
             return []
-    
+
+    def _extract_attachments_from_item(self, email_id, attachment_id, subject, received_date):
+        try:
+            url = f"{self.base_url}/users/{self.email}/messages/{email_id}/attachments/{attachment_id}?$expand=microsoft.graph.itemAttachment/item"
+            headers = self.graph_config.get_headers()
+
+            response = requests.get(url, headers=headers)
+            response.raise_for_status()
+
+            item = response.json().get('item', {})
+            attachments = item.get('attachments', [])
+
+            extracted_files = []
+
+            for att in attachments:
+                att_type = att.get('@odata.type', '')
+                filename = att.get('name', '')
+
+                if '#microsoft.graph.fileAttachment' in att_type:
+                    import base64
+                    content = base64.b64decode(att.get('contentBytes', ''))
+
+                    file_path = FileHandler.save_file(content, filename, subfolder='email_item')
+
+                    extracted_files.append({
+                        'path': file_path,
+                        'filename': filename,
+                        'source': 'email',
+                        'email_id': email_id,
+                        'email_subject': f"{subject} (ITEM)",
+                        'email_date': received_date
+                    })
+
+            return extracted_files
+
+        except Exception as e:
+            logger.error(f"Erro ao extrair itemAttachment: {e}")
+            return []
+
     def download_attachment(self, email_id, attachment_id, filename):
         """Baixa um anexo especfico"""
         try:
@@ -124,11 +164,22 @@ class EmailReader:
                     for attachment in attachments:
                         filename = attachment.get('name', 'arquivo')
                         attachment_id = attachment.get('id')
+
+                        attachment_type = attachment.get('@odata.type', '')
                         
-                        # Verificar extenso
-                        if self._is_valid_file_extension(filename):
+                        if '#microsoft.graph.itemAttachment' in attachment_type:
+                            arquivos_item = self._extract_attachments_from_item(
+                                email_id,
+                                attachment_id,
+                                subject,
+                                received_date
+                            )
+
+                            downloaded_files.extend(arquivos_item)
+
+                        elif self._is_valid_file_extension(filename):
                             file_path = self.download_attachment(email_id, attachment_id, filename)
-                            
+
                             if file_path:
                                 downloaded_files.append({
                                     'path': file_path,
@@ -141,13 +192,14 @@ class EmailReader:
                         else:
                             downloaded_files.append({
                                 'path': None,
-                                'filename': filename,
+                                'filename': None,
                                 'source': 'email',
                                 'email_id': email_id,
                                 'email_subject': subject,
                                 'email_date': received_date,
-                                'status': 'arquivo_invalido'
+                                'status': 'sem_anexo'
                             })
+
                 else:
                     downloaded_files.append({
                         'path': None,
@@ -169,10 +221,39 @@ class EmailReader:
     @staticmethod
     def _is_valid_file_extension(filename):
         """Verifica se o arquivo tem extenso vlida"""
-        valid_extensions = ['.pdf', '.doc', '.docx']
+        valid_extensions = ['.pdf', '.doc', '.docx', '.eml']
         file_ext = os.path.splitext(filename)[1].lower()
         return file_ext in valid_extensions
 
+    def _extract_attachments_from_eml(self, eml_path, parent_email_id, subject, received_date):
+        extracted_files = []
+
+        with open(eml_path, 'rb') as f:
+            msg = email.message_from_binary_file(f, policy=policy.default)
+
+        for part in msg.iter_attachments():
+            filename = part.get_filename()
+
+            if not filename:
+                continue
+
+            ext = os.path.splitext(filename)[1].lower()
+
+            if ext in ['.pdf', '.doc', '.docx']:
+                content = part.get_payload(decode=True)
+
+                file_path = FileHandler.save_file(content, filename, subfolder='email_eml')
+
+                extracted_files.append({
+                    'path': file_path,
+                    'filename': filename,
+                    'source': 'email',
+                    'email_id': parent_email_id,
+                    'email_subject': f"{subject} (EML)",
+                    'email_date': received_date
+                })
+
+        return extracted_files
 
     def move_email(self, email_id, destination_folder_name):
         """Move e-mail para uma pasta específica"""
