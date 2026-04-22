@@ -138,8 +138,26 @@ class EmailReader:
                                     'email_subject': subject,
                                     'email_date': received_date
                                 })
+                        else:
+                            downloaded_files.append({
+                                'path': None,
+                                'filename': filename,
+                                'source': 'email',
+                                'email_id': email_id,
+                                'email_subject': subject,
+                                'email_date': received_date,
+                                'status': 'arquivo_invalido'
+                            })
                 else:
-                    EmailReader.move_email(self, email_id,'CVs_Processados_Erro')
+                    downloaded_files.append({
+                        'path': None,
+                        'filename': None,
+                        'source': 'email',
+                        'email_id': email_id,
+                        'email_subject': subject,
+                        'email_date': received_date,
+                        'status': 'sem_anexo'
+                    })
             
             logger.info(f" Total de arquivos baixados do e-mail: {len(downloaded_files)}")
             return downloaded_files

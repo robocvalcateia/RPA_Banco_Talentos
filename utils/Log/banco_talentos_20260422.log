@@ -1,0 +1,190 @@
+[2026-04-22 11:13:51,134] INFO - utils.logger - ================================================================================
+[2026-04-22 11:13:51,135] INFO - utils.logger - INICIANDO BANCO DE TALENTOS
+[2026-04-22 11:13:51,135] INFO - utils.logger - ================================================================================
+[2026-04-22 11:13:56,774] INFO - config.microsoft_graph -  Microsoft Graph configurado com sucesso
+[2026-04-22 11:13:56,775] INFO - __main__ - ================================================================================
+[2026-04-22 11:13:56,775] INFO - __main__ -  INICIANDO BANCO DE TALENTOS
+[2026-04-22 11:13:56,776] INFO - __main__ - ================================================================================
+[2026-04-22 11:13:56,776] INFO - __main__ - 
+ETAPA 1: CAPTURANDO ARQUIVOS
+[2026-04-22 11:13:56,776] INFO - __main__ - --------------------------------------------------------------------------------
+[2026-04-22 11:13:56,776] INFO - __main__ - 
+Processando e-mails...
+[2026-04-22 11:13:56,777] INFO - modules.email_reader -  Iniciando leitura de e-mails...
+[2026-04-22 11:13:56,977] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 11:13:57,264] INFO - modules.email_reader -  5 e-mails encontrados
+[2026-04-22 11:13:57,264] INFO - modules.email_reader -  Processando e-mail: 
+[2026-04-22 11:13:57,265] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 11:13:57,639] INFO - modules.email_reader -  Processando e-mail: 
+[2026-04-22 11:13:57,640] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 11:13:57,983] INFO - modules.email_reader -  Processando e-mail: 
+[2026-04-22 11:13:57,983] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 11:13:58,289] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 11:13:59,026] INFO - modules.email_reader - E-mail movido para CVs_Processados_Erro
+[2026-04-22 11:13:59,028] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 11:13:59,724] INFO - modules.email_reader - E-mail movido para CVs_Processados_Erro
+[2026-04-22 11:13:59,724] INFO - modules.email_reader -  Total de arquivos baixados do e-mail: 0
+[2026-04-22 11:13:59,724] INFO - __main__ - 
+Total de arquivos capturados: 0
+[2026-04-22 11:13:59,725] WARNING - __main__ - Nenhum arquivo foi capturado
+[2026-04-22 11:13:59,725] INFO - __main__ - 
+================================================================================
+[2026-04-22 11:13:59,725] INFO - __main__ -  RESUMO DA EXECUÇÃO
+[2026-04-22 11:13:59,725] INFO - __main__ - ================================================================================
+[2026-04-22 11:13:59,726] INFO - __main__ -  E-mails processados: 0
+[2026-04-22 11:13:59,726] INFO - __main__ -  Mensagens WhatsApp processadas: 0
+[2026-04-22 11:13:59,726] INFO - __main__ -  Total de arquivos baixados: 0
+[2026-04-22 11:13:59,726] INFO - __main__ -  Arquivos processados: 0
+[2026-04-22 11:13:59,726] INFO - __main__ -  Novos candidatos: 0
+[2026-04-22 11:13:59,726] INFO - __main__ -  Candidatos atualizados: 0
+[2026-04-22 11:13:59,727] INFO - __main__ - Sem mudanças: 0
+[2026-04-22 11:13:59,727] INFO - __main__ -  Erros: 0
+[2026-04-22 11:14:00,137] INFO - config.mongodb -  Conectado ao MongoDB: Banco_de_Talentos
+[2026-04-22 11:14:00,263] INFO - config.mongodb -  ndices criados/verificados no MongoDB
+[2026-04-22 11:14:00,314] INFO - modules.mongodb_handler -  Estatsticas: {'total_candidatos': 31, 'origem_email': 31, 'origem_whatsapp': 0, 'com_email': 31, 'com_telefone': 30}
+[2026-04-22 11:14:00,315] INFO - __main__ - 
+ Estatísticas do MongoDB:
+[2026-04-22 11:14:00,315] INFO - __main__ -   Total de candidatos: 31
+[2026-04-22 11:14:00,315] INFO - __main__ -   Origem E-mail: 31
+[2026-04-22 11:14:00,315] INFO - __main__ -   Origem WhatsApp: 0
+[2026-04-22 11:14:00,316] INFO - __main__ -   Com E-mail: 31
+[2026-04-22 11:14:00,316] INFO - __main__ -   Com Telefone: 30
+[2026-04-22 11:14:00,316] INFO - __main__ - ================================================================================
+[2026-04-22 11:14:00,384] INFO - modules.mongodb_handler -  Estatsticas: {'total_candidatos': 31, 'origem_email': 31, 'origem_whatsapp': 0, 'com_email': 31, 'com_telefone': 30}
+[2026-04-22 11:14:06,294] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 11:14:34,441] INFO - utils.logger - ================================================================================
+[2026-04-22 11:14:34,442] INFO - utils.logger - INICIANDO BANCO DE TALENTOS
+[2026-04-22 11:14:34,442] INFO - utils.logger - ================================================================================
+[2026-04-22 11:14:38,719] INFO - config.microsoft_graph -  Microsoft Graph configurado com sucesso
+[2026-04-22 11:14:38,719] INFO - __main__ - ================================================================================
+[2026-04-22 11:14:38,719] INFO - __main__ -  INICIANDO BANCO DE TALENTOS
+[2026-04-22 11:14:38,719] INFO - __main__ - ================================================================================
+[2026-04-22 11:14:38,720] INFO - __main__ - 
+ETAPA 1: CAPTURANDO ARQUIVOS
+[2026-04-22 11:14:38,720] INFO - __main__ - --------------------------------------------------------------------------------
+[2026-04-22 11:14:38,720] INFO - __main__ - 
+Processando e-mails...
+[2026-04-22 11:14:38,720] INFO - modules.email_reader -  Iniciando leitura de e-mails...
+[2026-04-22 11:14:39,033] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 11:14:39,327] INFO - modules.email_reader -  3 e-mails encontrados
+[2026-04-22 11:14:39,328] INFO - modules.email_reader -  Processando e-mail: 
+[2026-04-22 11:14:39,328] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 11:14:39,764] INFO - modules.email_reader -  Processando e-mail: 
+[2026-04-22 11:14:39,764] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 11:14:40,084] INFO - modules.email_reader -  Processando e-mail: 
+[2026-04-22 11:14:40,085] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 11:14:40,414] INFO - modules.email_reader -  Total de arquivos baixados do e-mail: 0
+[2026-04-22 11:14:44,110] INFO - __main__ - 
+Total de arquivos capturados: 0
+[2026-04-22 11:15:10,587] INFO - utils.logger - ================================================================================
+[2026-04-22 11:15:10,588] INFO - utils.logger - INICIANDO BANCO DE TALENTOS
+[2026-04-22 11:15:10,588] INFO - utils.logger - ================================================================================
+[2026-04-22 11:15:14,854] INFO - config.microsoft_graph -  Microsoft Graph configurado com sucesso
+[2026-04-22 11:15:14,854] INFO - __main__ - ================================================================================
+[2026-04-22 11:15:14,854] INFO - __main__ -  INICIANDO BANCO DE TALENTOS
+[2026-04-22 11:15:14,855] INFO - __main__ - ================================================================================
+[2026-04-22 11:15:14,855] INFO - __main__ - 
+ETAPA 1: CAPTURANDO ARQUIVOS
+[2026-04-22 11:15:14,855] INFO - __main__ - --------------------------------------------------------------------------------
+[2026-04-22 11:15:14,855] INFO - __main__ - 
+Processando e-mails...
+[2026-04-22 11:15:34,390] INFO - modules.email_reader -  Iniciando leitura de e-mails...
+[2026-04-22 11:15:40,305] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 11:15:50,964] INFO - modules.email_reader -  3 e-mails encontrados
+[2026-04-22 11:16:05,365] INFO - modules.email_reader -  Processando e-mail: 
+[2026-04-22 11:16:10,360] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 11:17:27,748] INFO - utils.logger - ================================================================================
+[2026-04-22 11:17:27,749] INFO - utils.logger - INICIANDO BANCO DE TALENTOS
+[2026-04-22 11:17:27,749] INFO - utils.logger - ================================================================================
+[2026-04-22 11:17:35,632] INFO - config.microsoft_graph -  Microsoft Graph configurado com sucesso
+[2026-04-22 11:17:35,633] INFO - __main__ - ================================================================================
+[2026-04-22 11:17:35,633] INFO - __main__ -  INICIANDO BANCO DE TALENTOS
+[2026-04-22 11:17:35,633] INFO - __main__ - ================================================================================
+[2026-04-22 11:17:35,634] INFO - __main__ - 
+ETAPA 1: CAPTURANDO ARQUIVOS
+[2026-04-22 11:17:35,634] INFO - __main__ - --------------------------------------------------------------------------------
+[2026-04-22 11:17:35,634] INFO - __main__ - 
+Processando e-mails...
+[2026-04-22 11:18:57,007] INFO - modules.email_reader -  Iniciando leitura de e-mails...
+[2026-04-22 11:18:59,166] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 11:19:01,111] INFO - modules.email_reader -  3 e-mails encontrados
+[2026-04-22 11:19:07,575] INFO - modules.email_reader -  Processando e-mail: 
+[2026-04-22 11:19:07,838] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 11:19:11,731] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 11:19:12,482] INFO - modules.email_reader - E-mail movido para CVs_Processados_Erro
+[2026-04-22 11:19:26,895] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 11:19:27,488] ERROR - modules.email_reader - Erro ao mover e-mail: 404 Client Error: Not Found for url: https://graph.microsoft.com/v1.0/users/robocv@alcateiaconsulting.com.br/messages/AAMkADNjZDYxMjI4LTI1ODUtNGU4ZS04ZDkzLWFlNzQ2N2IzY2E5ZgBGAAAAAACs-FAKDrBjTIhCgv9aBd_4BwD4CDsgXwQmTZ2NEG4mHMdyAAAAAAEMAAD4CDsgXwQmTZ2NEG4mHMdyAAAT9CBYAAA=/move
+[2026-04-22 11:42:47,409] INFO - utils.logger - ================================================================================
+[2026-04-22 11:42:47,410] INFO - utils.logger - INICIANDO BANCO DE TALENTOS
+[2026-04-22 11:42:47,410] INFO - utils.logger - ================================================================================
+[2026-04-22 11:42:51,970] INFO - config.microsoft_graph -  Microsoft Graph configurado com sucesso
+[2026-04-22 11:42:51,971] INFO - __main__ - ================================================================================
+[2026-04-22 11:42:51,971] INFO - __main__ -  INICIANDO BANCO DE TALENTOS
+[2026-04-22 11:42:51,972] INFO - __main__ - ================================================================================
+[2026-04-22 11:42:51,972] INFO - __main__ - 
+ETAPA 1: CAPTURANDO ARQUIVOS
+[2026-04-22 11:42:51,973] INFO - __main__ - --------------------------------------------------------------------------------
+[2026-04-22 11:42:51,973] INFO - __main__ - 
+Processando e-mails...
+[2026-04-22 11:42:58,948] INFO - modules.email_reader -  Iniciando leitura de e-mails...
+[2026-04-22 11:43:01,671] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 11:43:04,504] INFO - modules.email_reader -  2 e-mails encontrados
+[2026-04-22 11:43:11,960] INFO - modules.email_reader -  Processando e-mail: 
+[2026-04-22 11:43:12,770] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 11:44:29,224] INFO - modules.email_reader -  Processando e-mail: 
+[2026-04-22 11:44:30,417] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 11:44:50,667] INFO - modules.email_reader -  Total de arquivos baixados do e-mail: 7
+[2026-04-22 11:45:08,563] INFO - __main__ - 
+Total de arquivos capturados: 7
+[2026-04-22 11:45:12,207] INFO - __main__ - 
+ETAPA 2: PROCESSANDO ARQUIVOS
+[2026-04-22 11:45:12,733] INFO - __main__ - --------------------------------------------------------------------------------
+[2026-04-22 11:47:33,133] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 11:47:33,868] INFO - modules.email_reader - E-mail movido para CVs_Processados_Erro
+[2026-04-22 11:47:43,007] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 11:47:43,548] ERROR - modules.email_reader - Erro ao mover e-mail: 404 Client Error: Not Found for url: https://graph.microsoft.com/v1.0/users/robocv@alcateiaconsulting.com.br/messages/AAMkADNjZDYxMjI4LTI1ODUtNGU4ZS04ZDkzLWFlNzQ2N2IzY2E5ZgBGAAAAAACs-FAKDrBjTIhCgv9aBd_4BwD4CDsgXwQmTZ2NEG4mHMdyAAAAAAEMAAD4CDsgXwQmTZ2NEG4mHMdyAAAUvkj9AAA=/move
+[2026-04-22 11:47:48,004] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 11:47:48,597] ERROR - modules.email_reader - Erro ao mover e-mail: 404 Client Error: Not Found for url: https://graph.microsoft.com/v1.0/users/robocv@alcateiaconsulting.com.br/messages/AAMkADNjZDYxMjI4LTI1ODUtNGU4ZS04ZDkzLWFlNzQ2N2IzY2E5ZgBGAAAAAACs-FAKDrBjTIhCgv9aBd_4BwD4CDsgXwQmTZ2NEG4mHMdyAAAAAAEMAAD4CDsgXwQmTZ2NEG4mHMdyAAAUvkj9AAA=/move
+[2026-04-22 11:47:51,874] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 11:47:52,458] ERROR - modules.email_reader - Erro ao mover e-mail: 404 Client Error: Not Found for url: https://graph.microsoft.com/v1.0/users/robocv@alcateiaconsulting.com.br/messages/AAMkADNjZDYxMjI4LTI1ODUtNGU4ZS04ZDkzLWFlNzQ2N2IzY2E5ZgBGAAAAAACs-FAKDrBjTIhCgv9aBd_4BwD4CDsgXwQmTZ2NEG4mHMdyAAAAAAEMAAD4CDsgXwQmTZ2NEG4mHMdyAAAUvkj9AAA=/move
+[2026-04-22 11:47:59,960] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 11:48:00,509] ERROR - modules.email_reader - Erro ao mover e-mail: 404 Client Error: Not Found for url: https://graph.microsoft.com/v1.0/users/robocv@alcateiaconsulting.com.br/messages/AAMkADNjZDYxMjI4LTI1ODUtNGU4ZS04ZDkzLWFlNzQ2N2IzY2E5ZgBGAAAAAACs-FAKDrBjTIhCgv9aBd_4BwD4CDsgXwQmTZ2NEG4mHMdyAAAAAAEMAAD4CDsgXwQmTZ2NEG4mHMdyAAAUvkj9AAA=/move
+[2026-04-22 11:48:00,509] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 11:48:01,136] INFO - modules.email_reader - E-mail movido para CVs_Processados_Erro
+[2026-04-22 11:48:01,137] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso
+[2026-04-22 11:48:01,662] ERROR - modules.email_reader - Erro ao mover e-mail: 404 Client Error: Not Found for url: https://graph.microsoft.com/v1.0/users/robocv@alcateiaconsulting.com.br/messages/AAMkADNjZDYxMjI4LTI1ODUtNGU4ZS04ZDkzLWFlNzQ2N2IzY2E5ZgBGAAAAAACs-FAKDrBjTIhCgv9aBd_4BwD4CDsgXwQmTZ2NEG4mHMdyAAAAAAEMAAD4CDsgXwQmTZ2NEG4mHMdyAAAW4b-6AAA=/move
+[2026-04-22 11:48:01,663] INFO - __main__ - 
+ ETAPA 3: GERANDO RELATÓRIO
+[2026-04-22 11:48:01,663] INFO - __main__ - --------------------------------------------------------------------------------
+[2026-04-22 11:48:01,663] INFO - __main__ - 
+================================================================================
+[2026-04-22 11:48:01,663] INFO - __main__ -  RESUMO DA EXECUÇÃO
+[2026-04-22 11:48:01,664] INFO - __main__ - ================================================================================
+[2026-04-22 11:48:01,664] INFO - __main__ -  E-mails processados: 2
+[2026-04-22 11:48:01,664] INFO - __main__ -  Mensagens WhatsApp processadas: 0
+[2026-04-22 11:48:01,664] INFO - __main__ -  Total de arquivos baixados: 7
+[2026-04-22 11:48:01,664] INFO - __main__ -  Arquivos processados: 0
+[2026-04-22 11:48:01,664] INFO - __main__ -  Novos candidatos: 0
+[2026-04-22 11:48:01,665] INFO - __main__ -  Candidatos atualizados: 0
+[2026-04-22 11:48:01,665] INFO - __main__ - Sem mudanças: 0
+[2026-04-22 11:48:01,665] INFO - __main__ -  Erros: 7
+[2026-04-22 11:48:01,939] INFO - config.mongodb -  Conectado ao MongoDB: Banco_de_Talentos
+[2026-04-22 11:48:02,042] INFO - config.mongodb -  ndices criados/verificados no MongoDB
+[2026-04-22 11:48:02,093] INFO - modules.mongodb_handler -  Estatsticas: {'total_candidatos': 31, 'origem_email': 31, 'origem_whatsapp': 0, 'com_email': 31, 'com_telefone': 30}
+[2026-04-22 11:48:02,094] INFO - __main__ - 
+ Estatísticas do MongoDB:
+[2026-04-22 11:48:02,094] INFO - __main__ -   Total de candidatos: 31
+[2026-04-22 11:48:02,094] INFO - __main__ -   Origem E-mail: 31
+[2026-04-22 11:48:02,094] INFO - __main__ -   Origem WhatsApp: 0
+[2026-04-22 11:48:02,095] INFO - __main__ -   Com E-mail: 31
+[2026-04-22 11:48:02,095] INFO - __main__ -   Com Telefone: 30
+[2026-04-22 11:48:02,095] INFO - __main__ - ================================================================================
+[2026-04-22 11:48:02,095] INFO - __main__ - 
+Limpando arquivos temporários...
+[2026-04-22 11:48:02,097] INFO - utils.file_handler -  Arquivos temporários limpos
+[2026-04-22 11:48:02,097] INFO - __main__ - 
+================================================================================
+[2026-04-22 11:48:02,097] INFO - __main__ -  PROCESSO CONCLUÍDO COM SUCESSO
+[2026-04-22 11:48:02,097] INFO - __main__ - ================================================================================
+[2026-04-22 11:48:06,096] INFO - modules.mongodb_handler -  Estatsticas: {'total_candidatos': 31, 'origem_email': 31, 'origem_whatsapp': 0, 'com_email': 31, 'com_telefone': 30}
+[2026-04-22 11:48:09,901] INFO - config.microsoft_graph -  Token de acesso obtido com sucesso

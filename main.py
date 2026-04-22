@@ -88,6 +88,19 @@ class BancoTalentosOrchestrator:
             
             for file_info in all_files:
                 try:
+
+                    status = file_info.get("status")
+
+                    if status in ["arquivo_invalido", "sem_anexo"]:
+                        self.stats['erros'] += 1
+                        
+                        if file_info.get("email_id"):
+                            email_reader.move_email(
+                                file_info["email_id"],
+                                Folder_Mail_Erro
+                            )
+                        continue
+
                     file_path = file_info['path']
                     filename = file_info['filename']
                     source = file_info['source']
